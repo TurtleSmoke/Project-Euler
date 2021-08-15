@@ -1,2 +1,5 @@
 # Ignore mdBook build directory
 book
+
+# Ignore idea configuration files
+.idea/*

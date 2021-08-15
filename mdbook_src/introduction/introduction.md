@@ -1,7 +1,7 @@
 # Introduction
 
 This document gathers explanations on the solutions of the
-[euler project](https://projecteuler.net) exercises.
+[Euler Project](https://projecteuler.net) exercises.
 Each exercise has its own part, which can be discovered in the table of 
 contents.
 You can find the source code of every solution as well as the source code of my

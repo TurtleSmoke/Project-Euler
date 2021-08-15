@@ -1,3 +1,3 @@
 # Summary
 
-- [problem_0001](./problem_0001.md)
+- [Problem 1](./problem_0001.md)

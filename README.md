@@ -1,15 +1,16 @@
 # Project Euler
 
-Please read [Project Euler](https://turtlesmoke.github.io/Project-Euler/) to
-check out the explained solutions.
+Please read the
+[TurtleSmoke Project Euler](https://turtlesmoke.github.io/Project-Euler/)
+to see the solutions explained.
 
 ## Contributing
 
 ### You can find the conventions in [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-I don't apply any special rules concerning the code base since it is not the
+I don't apply particular rules concerning the code base since it is not the
 purpose of this repository. However, the code **must** be understandable, which
-means that it should not be an 'ugly one-liner'. Performance is not sought here.
+means that it must not be an ugly one-liner. Performance is not the goal here.
 
-Note that I could refuse your pull request simply because I don't think it's an
+Note that I might reject your pull request simply because I don't think it's an
 interesting feature to add.

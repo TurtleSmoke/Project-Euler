@@ -7,4 +7,6 @@ title = "Project Euler"
 
 [output.html]
 git-repository-url = "https://github.com/TurtleSmoke/Project-Euler"
-site-url = "https://turtlesmoke.github.io/Project-Euler/chapter_1.html#chapter-1"
+site-url = "https://turtlesmoke.github.io/Project-Euler"
+mathjax-support = true
+

@@ -11,7 +11,7 @@ The first problem is actually quite easy, the naive solution would be to iterate
 over every number between 0 and 1000 and check those that are multiples of 3 
 or 5.
 
-From [solution1.py](../problems/problem_0001/solution1.py):
+From [solution1.py](../../problems/problem_0001/solution1.py):
 
 ```python
 def sum_of_three_and_five(limit=1000):
@@ -26,7 +26,7 @@ needed, iterating 3 by 3 and then 5 by 5 might be faster. We have to be careful
 with numbers that are multiples of 3 and 5 because they will be counted twice.
 Just delete them, which is the same as removing all the multiples of 15.
 
-From [solution2.py](../problems/problem_0001/solution2.py):
+From [solution2.py](../../problems/problem_0001/solution2.py):
 
 ```python
 def sum_of_three_and_five(limit=1000):
@@ -57,7 +57,7 @@ The [better solution](#better-solution) can be reduced to:
 
 Note that the limit is 999 because 1000 should not be included.
 
-From [solution3.py](../problems/problem_0001/solution3.py):
+From [solution3.py](../../problems/problem_0001/solution3.py):
 
 ```python
 def sum_of_three_and_five(limit=999):

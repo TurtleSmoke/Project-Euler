@@ -2,9 +2,8 @@ name: github pages
 
 on:
   push:
-      paths:
-        - 'mdbook_src/**'
-  pull_request:
+      branches:
+        - main
       paths:
         - 'mdbook_src/**'
 

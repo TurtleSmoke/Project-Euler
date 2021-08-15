@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - Project Euler</title>
+        <title>problem_0001 - Project Euler</title>
                 
 
         <!-- Custom HTML head -->
@@ -32,6 +32,8 @@
 
         <!-- Custom theme stylesheets -->
         
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
             </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -82,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="problem_0001.html"><strong aria-hidden="true">1.</strong> problem_0001</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -146,7 +148,66 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-1"><a class="header" href="#chapter-1">Chapter 1</a></h1>
+                        <h1 id="a-hrefhttpsprojecteulernetproblem1multiples-of-3-and-5a"><a class="header" href="#a-hrefhttpsprojecteulernetproblem1multiples-of-3-and-5a"><a href="https://projecteuler.net/problem=1">Multiples of 3 and 5</a></a></h1>
+<blockquote>
+<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we
+get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+</blockquote>
+<blockquote>
+<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+</blockquote>
+<h2 id="naive-solution"><a class="header" href="#naive-solution">Naive solution</a></h2>
+<p>The first problem is actually quite easy, the naive solution would be to iterate
+over every number between 0 and 1000 and check those that are multiples of 3 
+or 5.</p>
+<p>From <a href="../problems/problem_0001/solution1.py">solution1.py</a>:</p>
+<pre><code class="language-python">def sum_of_three_and_five(limit=1000):
+    return sum(i for i in range(limit) if i % 3 == 0 or i % 5 == 0)
+</code></pre>
+<h2 id="better-solution"><a class="header" href="#better-solution">Better solution</a></h2>
+<p>The <a href="#naive-solution">naive solution</a> is actually quite slow, at least it would
+be if the limit was greater than 1000. Since only multiples of 3 and 5 are
+needed, iterating 3 by 3 and then 5 by 5 might be faster. We have to be careful
+with numbers that are multiples of 3 and 5 because they will be counted twice.
+Just delete them, which is the same as removing all the multiples of 15.</p>
+<p>From <a href="../problems/problem_0001/solution2.py">solution2.py</a>:</p>
+<pre><code class="language-python">def sum_of_three_and_five(limit=1000):
+    sum_3 = sum(i for i in range(0, limit, 3) if i % 3 == 0)
+    sum_5 = sum(i for i in range(0, limit, 5) if i % 5 == 0)
+    sum_15 = sum(i for i in range(0, limit, 15) if i % 15 == 0)
+    return sum_3 + sum_5 - sum_15
+</code></pre>
+<h2 id="mathematical-solution"><a class="header" href="#mathematical-solution">Mathematical solution</a></h2>
+<p>The <a href="#better-solution">better solution</a> is quite interesting because it reduces
+the problem in smaller part. For the case of 3 the sum is:</p>
+<p>\[ 3 + 6 + 9 + 12 + 15 + ... \]
+\[ 3 * ( 1 + 2 + 3 + 4 + 5 ...) \]
+\[ 3 * \sum_{i=0}^{\lfloor\frac{1000}{3}\rfloor} x_i \]</p>
+<p>It is the sum of an arithmetic sequences, which is equal to
+\[ \frac{n*(n+1)}{2} \]
+The <a href="#better-solution">better solution</a> can be reduced to:</p>
+<p>\[
+3 * \frac{\lfloor\frac{999}{3}\rfloor * (\lfloor\frac{999}{3}\rfloor + 1)}{2} 
++5 * \frac{\lfloor\frac{999}{5}\rfloor * (\lfloor\frac{999}{5}\rfloor + 1)}{2} 
+-15 * \frac{\lfloor\frac{999}{15}\rfloor * (\lfloor\frac{999}{15}\rfloor + 1)}{2}
+\]</p>
+<p>Note that the limit is 999 because 1000 should not be included.</p>
+<p>From <a href="../problems/problem_0001/solution3.py">solution3.py</a>:</p>
+<pre><code class="language-python">def sum_of_three_and_five(limit=999):
+    limit_3 = limit // 3
+    limit_5 = limit // 5
+    limit_15 = limit // 15
+
+    sum_3 = 3 * (limit_3 * (limit_3 + 1) // 2)
+    sum_5 = 5 * (limit_5 * (limit_5 + 1) // 2)
+    sum_15 = 15 * (limit_15 * (limit_15 + 1) // 2)
+
+    return sum_3 + sum_5 - sum_15
+</code></pre>
+<h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
+<blockquote>
+<p>233168</p>
+</blockquote>
 
                     </main>
 

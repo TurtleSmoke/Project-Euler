@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="introduction/purpose.html"><strong aria-hidden="true">1.1.</strong> Purpose</a></li><li class="chapter-item expanded "><a href="introduction/usage.html"><strong aria-hidden="true">1.2.</strong> Usage</a></li><li class="chapter-item expanded "><a href="introduction/contributing.html"><strong aria-hidden="true">1.3.</strong> Contributing</a></li></ol></li><li class="chapter-item expanded "><a href="problems/project_euler.html"><strong aria-hidden="true">2.</strong> Project Euler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="problems/problem_0001.html"><strong aria-hidden="true">2.1.</strong> Problem 1</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/problem.html"><strong aria-hidden="true">2.2.</strong> Problem 2: even Fibonacci numbers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="problems/problem_0002/solution1.html"><strong aria-hidden="true">2.2.1.</strong> Naive solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution2.html"><strong aria-hidden="true">2.2.2.</strong> Mathematical solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution3.html"><strong aria-hidden="true">2.2.3.</strong> Mathematical improvement</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution.html"><strong aria-hidden="true">2.2.4.</strong> Solution</a></li></ol></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="introduction/purpose.html"><strong aria-hidden="true">1.1.</strong> Purpose</a></li><li class="chapter-item expanded "><a href="introduction/usage.html"><strong aria-hidden="true">1.2.</strong> Usage</a></li><li class="chapter-item expanded "><a href="introduction/contributing.html"><strong aria-hidden="true">1.3.</strong> Contributing</a></li></ol></li><li class="chapter-item expanded "><a href="problems/project_euler.html"><strong aria-hidden="true">2.</strong> Project Euler</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="problems/problem_0001/problem.html"><strong aria-hidden="true">2.1.</strong> Problem 1: Multiples of 3 and 5</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="problems/problem_0001/solution1.html"><strong aria-hidden="true">2.1.1.</strong> Naive solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0001/solution2.html"><strong aria-hidden="true">2.1.2.</strong> Better solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0001/solution3.html"><strong aria-hidden="true">2.1.3.</strong> Mathematical solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0001/solution.html"><strong aria-hidden="true">2.1.4.</strong> Solution</a></li></ol></li><li class="chapter-item expanded "><a href="problems/problem_0002/problem.html"><strong aria-hidden="true">2.2.</strong> Problem 2: even Fibonacci numbers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="problems/problem_0002/solution1.html"><strong aria-hidden="true">2.2.1.</strong> Naive solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution2.html"><strong aria-hidden="true">2.2.2.</strong> Mathematical solution</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution3.html"><strong aria-hidden="true">2.2.3.</strong> Mathematical improvement</a></li><li class="chapter-item expanded "><a href="problems/problem_0002/solution.html"><strong aria-hidden="true">2.2.4.</strong> Solution</a></li></ol></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -225,20 +225,20 @@ get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
 <blockquote>
 <p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
 </blockquote>
-<h2 id="naive-solution"><a class="header" href="#naive-solution">Naive solution</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="naive-solution"><a class="header" href="#naive-solution">Naive solution</a></h1>
 <p>The first problem is actually quite easy, the naive solution would be to iterate
-over every number between 0 and 1000 and check those that are multiples of 3 
-or 5.</p>
+over every number between 0 and 1000 and check those that are multiples of 3 or
+5.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0001/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def sum_of_three_and_five(limit=1000):
     return sum(i for i in range(limit) if i % 3 == 0 or i % 5 == 0)
 </code></pre>
-<h2 id="better-solution"><a class="header" href="#better-solution">Better solution</a></h2>
-<p>The <a href="problems/problem_0001.html#naive-solution">naive solution</a> is actually quite slow, at least it would
-be if the limit was greater than 1000. Since only multiples of 3 and 5 are
-needed, iterating 3 by 3 and then 5 by 5 might be faster. We have to be careful
-with numbers that are multiples of 3 and 5 because they will be counted twice.
-Just delete them, which is the same as removing all the multiples of 15.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="better-solution"><a class="header" href="#better-solution">Better solution</a></h1>
+<p>The <a href="problems/problem_0001/solution1.html">naive solution</a> is actually quite slow, at least it would
+be if the limit were greater than 1000. Since only multiples of 3 and 5 are
+useful, iterating 3 by 3 and then 5 by 5 will be faster. We have to be careful
+with the multiples of 3 and 5 because they will be counted twice. So we have to
+subtract them from the result.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0001/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def sum_of_three_and_five(limit=1000):
     sum_3 = sum(i for i in range(0, limit, 3) if i % 3 == 0)
@@ -246,20 +246,17 @@ Just delete them, which is the same as removing all the multiples of 15.</p>
     sum_15 = sum(i for i in range(0, limit, 15) if i % 15 == 0)
     return sum_3 + sum_5 - sum_15
 </code></pre>
-<h2 id="mathematical-solution"><a class="header" href="#mathematical-solution">Mathematical solution</a></h2>
-<p>The <a href="problems/problem_0001.html#better-solution">better solution</a> is quite interesting because it reduces
-the problem in smaller part. For the case of 3 the sum is:</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mathematical-solution"><a class="header" href="#mathematical-solution">Mathematical solution</a></h1>
+<p>The <a href="problems/problem_0001/solution2.html">better solution</a> is quite interesting because it reduces the
+problem into smaller parts. For example, the sum of multiples of three is the
+following:</p>
 <p>\[ 3 + 6 + 9 + 12 + 15 + ... \]
 \[ 3 * ( 1 + 2 + 3 + 4 + 5 ...) \]
 \[ 3 * \sum_{i=0}^{\lfloor\frac{1000}{3}\rfloor} x_i \]</p>
-<p>It is the sum of an arithmetic sequences, which is equal to
-\[ \frac{n*(n+1)}{2} \]
-The <a href="problems/problem_0001.html#better-solution">better solution</a> can be reduced to:</p>
-<p>\[
-3 * \frac{\lfloor\frac{999}{3}\rfloor * (\lfloor\frac{999}{3}\rfloor + 1)}{2} 
-+5 * \frac{\lfloor\frac{999}{5}\rfloor * (\lfloor\frac{999}{5}\rfloor + 1)}{2} 
--15 * \frac{\lfloor\frac{999}{15}\rfloor * (\lfloor\frac{999}{15}\rfloor + 1)}{2}
-\]</p>
+<p>It is the sum of an arithmetic sequences, which is equal to:</p>
+<p>\[ \frac{n*(n+1)}{2} \]</p>
+<p>The <a href="problems/problem_0001/solution2.html">better solution</a> can be reduced to:</p>
+<p>\[ 3 * \frac{\lfloor\frac{999}{3}\rfloor * (\lfloor\frac{999}{3}\rfloor + 1)}{2} +5 * \frac{\lfloor\frac{999}{5}\rfloor * (\lfloor\frac{999}{5}\rfloor + 1)}{2} -15 * \frac{\lfloor\frac{999}{15}\rfloor * (\lfloor\frac{999}{15}\rfloor + 1)}{2} \]</p>
 <p>Note that the limit is 999 because 1000 should not be included.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0001/solution3.py">solution3.py</a>:</p>
 <pre><code class="language-python">def sum_of_three_and_five(limit=999):
@@ -273,10 +270,12 @@ The <a href="problems/problem_0001.html#better-solution">better solution</a> can
 
     return sum_3 + sum_5 - sum_15
 </code></pre>
-<h2 id="solution"><a class="header" href="#solution">Solution</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="solution"><a class="header" href="#solution">Solution</a></h1>
+<hr />
 <blockquote>
 <p>233168</p>
 </blockquote>
+<hr />
 <div style="break-before: page; page-break-before: always;"></div><h1 id="a-hrefhttpsprojecteulernetproblem2even-fibonacci-numbersa"><a class="header" href="#a-hrefhttpsprojecteulernetproblem2even-fibonacci-numbersa"><a href="https://projecteuler.net/problem=2">Even Fibonacci numbers</a></a></h1>
 <blockquote>
 <p>Each new term in the Fibonacci sequence is generated by adding the

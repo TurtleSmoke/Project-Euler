@@ -1,4 +1,4 @@
-## Mathematical solution
+# Mathematical solution
 
 The [better solution](solution2.md) is quite interesting because it reduces the
 problem into smaller parts. For example, the sum of multiples of three is the

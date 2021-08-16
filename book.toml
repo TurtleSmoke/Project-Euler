@@ -1,12 +1,26 @@
 [book]
 authors = ["TurtleSmoke"]
+description = "Solution of Project Euler problems"
 language = "en"
 multilingual = false
 src = "mdbook_src"
 title = "Project Euler"
 
+[build]
+create-missing = false
+
 [output.html]
 git-repository-url = "https://github.com/TurtleSmoke/Project-Euler"
 site-url = "https://turtlesmoke.github.io/Project-Euler"
 mathjax-support = true
+default-theme = "navy"
+preferred-dark-theme = "navy"
 
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.search]
+enable = true
+limit-result = 20
+use-boolean-and = true

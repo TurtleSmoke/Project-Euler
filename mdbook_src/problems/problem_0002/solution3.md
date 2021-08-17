@@ -1,4 +1,4 @@
-# Mathematical improvement
+# Fibonacci and the golden ratio
 
 Although the number of iterations of the second solution is lower than that of
 the first solution, it is possible to do better:
@@ -15,7 +15,7 @@ Actually, the Fibonacci numbers can be approximated with the following
 \\[ F_{n} = \frac{\varphi^{n} - (-\varphi)^{-n}}{\sqrt{5}} \\]
 
 where \\( \varphi = \frac{1+\sqrt{5}}{2} \\) is the
-[golden ration](https://en.wikipedia.org/wiki/Golden_ratio).
+[golden ratio](https://en.wikipedia.org/wiki/Golden_ratio).
 
 \\( -(-\varphi)^{-n} \\) can be ignored for large numbers which gives the
 equation:

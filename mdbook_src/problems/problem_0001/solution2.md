@@ -1,7 +1,7 @@
-# Better solution
+# Three by three
 
-The [naive solution](solution1.md) is actually quite slow, at least it would
-be if the limit were greater than 1000. Since only multiples of 3 and 5 are
+The [Naive solution](solution1.md) is actually quite slow, at least it would
+be if the limit was greater than 1000. Since only multiples of 3 and 5 are
 useful, iterating 3 by 3 and then 5 by 5 will be faster. We have to be careful
 with the multiples of 3 and 5 because they will be counted twice. So we have to
 subtract them from the result.

@@ -1,4 +1,4 @@
-# Mathematical solution
+# Fibonacci recurrence
 
 If we take a look at the Fibonacci series:
 

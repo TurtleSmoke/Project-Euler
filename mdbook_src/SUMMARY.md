@@ -16,3 +16,7 @@
         - [Mathematical solution](problems/problem_0002/solution2.md)
         - [Mathematical improvement](problems/problem_0002/solution3.md)
         - [Solution](problems/problem_0002/solution.md)
+    - [Problem 3: Largest prime factor](problems/problem_0003/problem.md)
+        - [Naive solution](problems/problem_0003/solution1.md)
+        - [Two by two](problems/problem_0003/solution2.md)
+        - [Solution](problems/problem_0003/solution.md)

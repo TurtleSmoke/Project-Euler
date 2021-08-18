@@ -342,7 +342,7 @@ function.</p>
 the first solution, it is possible to do better:</p>
 <p>\[ \begin{align} \frac{1}{4}(E_{n+1} + E_{n} - 2) &amp;= \frac{1}{4}(F_{3(n+1)} + F_{3n} - 2)\\ &amp;= \frac{1}{4}(F_{3n+2} + F_{3n+1} + F_{3n} - 2)\\ &amp;= \frac{1}{4}(2F_{3n+2} - 2)\\ &amp;= \frac{1}{2}(F_{3n+2} - 1)\\ \end{align} \]</p>
 <p>This does not really change the problem, since we still need to iterate until
-\( F_{3n+1} \) reach the limit and then compute \(\frac{1}{2}(F_
+\( F_{3n} \) reach the limit and then compute \(\frac{1}{2}(F_
 {3n+2} - 1)\).</p>
 <p>Actually, the Fibonacci numbers can be approximated with the following
 <a href="https://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression">equation</a>:</p>
@@ -352,9 +352,9 @@ the first solution, it is possible to do better:</p>
 <p>\( -(-\varphi)^{-n} \) can be ignored for large numbers which gives the
 equation:</p>
 <p>\[ F_{n} = \frac{\varphi^{n}}{\sqrt{5}} \]</p>
-<p>We are looking for the limit \( M \) such that:</p>
+<p>The limit is the n-th Fibonacci number such that:</p>
 <p>\[ \begin{align} F_{n} &amp;\leqslant M\\ \frac{\varphi ^{n}}{\sqrt{5}} &amp;\leqslant M\\ \varphi ^{n} &amp;\leqslant \sqrt{5} M\\ n\log( \varphi ) &amp;\leqslant \log\left(\sqrt{5} M\right)\\ n &amp;\leqslant \left\lfloor \frac{\log\left(\sqrt{5} M\right)}{\log( \varphi )} \right\rfloor \end{align} \]</p>
-<p>The result can be computed with \(\frac{1}{2}(F_{3n+2} - 1) \) where \( n =
+<p>The result can be computed with \(\frac{1}{2}(F_{n+2} - 1) \) where \( n =
 \left\lfloor \frac{\log\left(\sqrt{5} M\right)}{\log( \varphi )} \right\rfloor
 \):</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0002/solution3.py">solution3.py</a>:</p>

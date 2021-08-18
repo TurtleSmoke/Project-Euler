@@ -1,6 +1,6 @@
 # Brute force
 
-> The [fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) form
+> The [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) form
 > a sequence, called the Fibonacci
 > [sequence](https://en.wikipedia.org/wiki/Integer_sequence), such that each
 > number is the sum of the two preceding ones, starting from 0 and 1.

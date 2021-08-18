@@ -1,4 +1,4 @@
-# Naive solution
+# Brute force
 
 \\( i \\) is a factor of \\( n \\) if \\( n\ \equiv\ 0\ [i] \\), in our case it
 is enough to iterate over each number. When a factor is found, we simply divide

@@ -4,14 +4,14 @@ If we take a look at the Fibonacci series:
 
 > 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, ...
 
-Since our only concern is the parity of the numbers, with O begins odd and E
+Since our only concern is the parity of the numbers, with O being odd and E
 even:
 
 > E, O, O, E, O, O, E, O, O, E, O, O, E, O, O, E, ...
 
 #### It seems that every third number of the series is even, let's try to prove it properly.
 
-\\[ \begin{gather} When\ n\ =\ 0\ then\ F_{0} =0\ is\ even\\\\ Assuming\ that\ F_{3n} \ is\ even.\\\\ \\\\ F_{3( n+1)} =F_{3n+2} +F_{3n+1} =( F_{3n+1} +F_{3n}) +F_{3n+1} =2F_{3n+1} +F_ {3n}\\\\ \\\\ Since\ F_{3n} \ is\ even\ and\ 2F_{3n+1} \ is\ also\ even,\ we\ have\ F_{3( n+1)} \ even\\\\ because\ it\ is\ the\ sum\ of\ two\ even\ numbers. \end{gather} \\]
+\\[ \begin{gather} If\ n=0\ then\ F_{0}=0\ is\ even\\\\\\\\ Assuming\ that\ F_ {3n} \ is\ even.\\\\ \\\\ F_{3( n+1)} =F_{3n+2} +F_{3n+1} =( F_{3n+1} +F_{3n}) +F_{3n+1} =2F_{3n+1} +F_ {3n}\\\\ \\\\ Since\ F_{3n} \ is\ even\ and\ 2F_{3n+1} \ is\ also\ even,\ we\ have\ F_{3( n+1)} \ even\\\\ because\ it\ is\ the\ sum\ of\ two\ even\ numbers. \end{gather} \\]
 
 #### This mean that the series of even Fibonacci number is:
 

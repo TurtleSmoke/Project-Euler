@@ -11,15 +11,15 @@ def is_palindrome(n):
     return str(n) == str(n)[::-1]
 ```
 
-A better solution exists using modulus and division, but performance is
-not the goal here.
+A better solution exists using modulus and division, but performance is not the
+goal here.
 
-The range of 3-digit numbers is \\( [100; 999] \\), the naive solution will 
-consist in simply iterate over each number and check which product is the 
-largest palindrome. A little trick: if \\( 100 * 200 \\) does not work, \\( 
-200 * 100 \\) won't work either, so the second loop starts from the current 
+The range of 3-digit numbers is \\( [100; 999] \\), the naive solution will
+consist in simply iterate over each number and check which product is the
+largest palindrome. A little trick: if \\( 100 * 200 \\) does not work, \\(
+200 * 100 \\) won't work either, so the second loop starts from the current
 number of the first one.
-  
+
 From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0004/solution1.py):
 
 ```python

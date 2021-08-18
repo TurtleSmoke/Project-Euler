@@ -30,8 +30,8 @@ Resulting in the numbers:
 (900 + 50 + 7)(900 + 10e + 7) = 867999 + 9570x\\\\
 (900 + 70 + 9)(900 + 10e + 1) = 882079 + 9790x \\]
 
-The first number implies that \\( e \\) is equal to 9 because if \\( e \\) was 
-equal to 8, then \\(824439 \* 9130 \* 8 = 897479 \\) would not start with 9. 
-With \\( e = 9 \\) we have \\( 913 \* 993 \\) which is the correct answer. 
-Both \\( (900 + 50 + 7)(900 + 10e + 7) \\) and \\( (900 + 70 + 9)(900 + 
-10e + 1) \\) give smaller palindrome.
+The first number implies that \\( e \\) is equal to 9 because if \\( e \\) was
+equal to 8, then \\(824439 \* 9130 \* 8 = 897479 \\) would not start with 9.
+With \\( e = 9 \\) we have \\( 913 \* 993 \\) which is the correct answer. Both
+\\( (900 + 50 + 7)(900 + 10e + 7) \\) and \\( (900 + 70 + 9)(900 + 10e + 1) \\)
+give smaller palindrome.

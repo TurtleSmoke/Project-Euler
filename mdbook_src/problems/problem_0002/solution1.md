@@ -1,4 +1,4 @@
-# Naive solution
+# Brute force
 
 > The [fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number) form
 > a sequence, called the Fibonacci

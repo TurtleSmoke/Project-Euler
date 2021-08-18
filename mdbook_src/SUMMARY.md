@@ -20,3 +20,8 @@
         - [Naive solution](problems/problem_0003/solution1.md)
         - [Two by two](problems/problem_0003/solution2.md)
         - [Solution](problems/problem_0003/solution.md)
+    - [Problem 4: Largest palindrome product](problems/problem_0004/problem.md)
+        - [Brute force](problems/problem_0004/solution1.md)
+        - [Factorisation is the key](problems/problem_0004/solution2.md)
+        - [With pen and paper](problems/problem_0004/solution3.md)
+        - [Solution](problems/problem_0004/solution.md)

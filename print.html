@@ -311,13 +311,13 @@ reached by adding each even number to the result.</p>
 <blockquote>
 <p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, ...</p>
 </blockquote>
-<p>Since our only concern is the parity of the numbers, with O begins odd and E
+<p>Since our only concern is the parity of the numbers, with O being odd and E
 even:</p>
 <blockquote>
 <p>E, O, O, E, O, O, E, O, O, E, O, O, E, O, O, E, ...</p>
 </blockquote>
 <h4 id="it-seems-that-every-third-number-of-the-series-is-even-lets-try-to-prove-it-properly"><a class="header" href="#it-seems-that-every-third-number-of-the-series-is-even-lets-try-to-prove-it-properly">It seems that every third number of the series is even, let's try to prove it properly.</a></h4>
-<p>\[ \begin{gather} When\ n\ =\ 0\ then\ F_{0} =0\ is\ even\\ Assuming\ that\ F_{3n} \ is\ even.\\ \\ F_{3( n+1)} =F_{3n+2} +F_{3n+1} =( F_{3n+1} +F_{3n}) +F_{3n+1} =2F_{3n+1} +F_ {3n}\\ \\ Since\ F_{3n} \ is\ even\ and\ 2F_{3n+1} \ is\ also\ even,\ we\ have\ F_{3( n+1)} \ even\\ because\ it\ is\ the\ sum\ of\ two\ even\ numbers. \end{gather} \]</p>
+<p>\[ \begin{gather} If\ n=0\ then\ F_{0}=0\ is\ even\\\\ Assuming\ that\ F_ {3n} \ is\ even.\\ \\ F_{3( n+1)} =F_{3n+2} +F_{3n+1} =( F_{3n+1} +F_{3n}) +F_{3n+1} =2F_{3n+1} +F_ {3n}\\ \\ Since\ F_{3n} \ is\ even\ and\ 2F_{3n+1} \ is\ also\ even,\ we\ have\ F_{3( n+1)} \ even\\ because\ it\ is\ the\ sum\ of\ two\ even\ numbers. \end{gather} \]</p>
 <h4 id="this-mean-that-the-series-of-even-fibonacci-number-is"><a class="header" href="#this-mean-that-the-series-of-even-fibonacci-number-is">This mean that the series of even Fibonacci number is:</a></h4>
 <p>\[ \begin {gather} E_{n} = F_{3n}\\ E_{n+2} = F_{3n+6} = F_{3n+5} + F_ {3n+4}\\ E_{n+2} = (F_{3n+4} + F_{3n+3}) + (F_{3n+3} + F_{3n+2})\\ E_{n+2} = (F_{3n+3} + F_{3n+2} + F_{3n+3}) + (F_{3n+3} + F_{3n+1} + F_{3n})\\ E_{n+2} = 3F_{3n+3} + (F_{3n+2} + F_{3n+1}) + F_{3n}\\ E_{n+2} = 4F_{3(n+1)} + F_{3n}\\ E_{n+2} = 4E_{n+1} + E_{n}\\ \end{gather} \]</p>
 <h4 id="which-result-int-the-following-recurrence-relation"><a class="header" href="#which-result-int-the-following-recurrence-relation">Which result int the following recurrence relation:</a></h4>

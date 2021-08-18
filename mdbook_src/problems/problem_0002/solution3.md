@@ -6,7 +6,7 @@ the first solution, it is possible to do better:
 \\[ \begin{align} \frac{1}{4}(E_{n+1} + E_{n} - 2) &= \frac{1}{4}(F_{3(n+1)} + F_{3n} - 2)\\\\ &= \frac{1}{4}(F_{3n+2} + F_{3n+1} + F_{3n} - 2)\\\\ &= \frac{1}{4}(2F_{3n+2} - 2)\\\\ &= \frac{1}{2}(F_{3n+2} - 1)\\\\ \end{align} \\]
 
 This does not really change the problem, since we still need to iterate until
-\\( F_{3n+1} \\) reach the limit and then compute \\(\frac{1}{2}(F_
+\\( F_{3n} \\) reach the limit and then compute \\(\frac{1}{2}(F_
 {3n+2} - 1)\\).
 
 Actually, the Fibonacci numbers can be approximated with the following
@@ -22,11 +22,11 @@ equation:
 
 \\[ F_{n} = \frac{\varphi^{n}}{\sqrt{5}} \\]
 
-We are looking for the limit \\( M \\) such that:
+The limit is the n-th Fibonacci number such that:
 
 \\[ \begin{align} F_{n} &\leqslant M\\\\ \frac{\varphi ^{n}}{\sqrt{5}} &\leqslant M\\\\ \varphi ^{n} &\leqslant \sqrt{5} M\\\\ n\log( \varphi ) &\leqslant \log\left(\sqrt{5} M\right)\\\\ n &\leqslant \left\lfloor \frac{\log\left(\sqrt{5} M\right)}{\log( \varphi )} \right\rfloor \end{align} \\]
 
-The result can be computed with \\(\frac{1}{2}(F_{3n+2} - 1) \\) where \\( n =
+The result can be computed with \\(\frac{1}{2}(F_{n+2} - 1) \\) where \\( n =
 \left\lfloor \frac{\log\left(\sqrt{5} M\right)}{\log( \varphi )} \right\rfloor
 \\):
 

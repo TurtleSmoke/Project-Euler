@@ -14,5 +14,6 @@ def largest_prime_factor(n=600851475143):
             n //= res
         else:
             res += 2
+
     return res
 ```

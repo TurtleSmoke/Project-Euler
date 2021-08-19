@@ -20,5 +20,6 @@ def sum_of_even_fibonacci_numbers(limit=4000000):
         if f0 % 2 == 0:
             res += f0
         f0, f1 = f1, f0 + f1
+
     return res
 ```

@@ -12,6 +12,7 @@ def smallest_multiple(n=20):
             res *= p**(floor(log_n / log(p)))
         else:
             res *= p
+
     return res
 
 

@@ -8,6 +8,7 @@ def largest_palindrome_product():
         for y in range(x, 1000):
             if x * y > res and is_palindrome(x * y):
                 res = x * y
+                
     return res
 
 

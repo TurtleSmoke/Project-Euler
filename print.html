@@ -243,6 +243,7 @@ them from the result.</p>
     sum_3 = sum(i for i in range(0, limit, 3) if i % 3 == 0)
     sum_5 = sum(i for i in range(0, limit, 5) if i % 5 == 0)
     sum_15 = sum(i for i in range(0, limit, 15) if i % 15 == 0)
+   
     return sum_3 + sum_5 - sum_15
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="summing-everything"><a class="header" href="#summing-everything">Summing everything</a></h1>
@@ -304,6 +305,7 @@ reached by adding each even number to the result.</p>
         if f0 % 2 == 0:
             res += f0
         f0, f1 = f1, f0 + f1
+
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fibonacci-recurrence"><a class="header" href="#fibonacci-recurrence">Fibonacci recurrence</a></h1>
@@ -335,6 +337,7 @@ function.</p>
     e1 = 2
     while e1 &lt; limit:
         e0, e1 = e1, 4 * e1 + e0
+
     return (e1 + e0 - 2) // 4
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="fibonacci-and-the-golden-ratio"><a class="header" href="#fibonacci-and-the-golden-ratio">Fibonacci and the golden ratio</a></h1>
@@ -359,10 +362,9 @@ equation:</p>
 \):</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0002/solution3.py">solution3.py</a>:</p>
 <pre><code class="language-python">def sum_of_even_fibonacci_numbers(limit=4000000):
-    golden_ratio = (1 + math.sqrt(5)) / 2
-    n = math.floor(math.log(math.sqrt(5) * limit) / math.log(golden_ratio))
-
-    fn = round((golden_ratio**(n + 2)) / math.sqrt(5))
+    golden_ratio = (1 + sqrt(5)) / 2
+    n = floor(log(sqrt(5) * limit) / log(golden_ratio))
+    fn = round((golden_ratio**(n + 2)) / sqrt(5))
 
     return (fn - 1) // 2
 </code></pre>
@@ -393,6 +395,7 @@ also the largest.</p>
             n //= res
         else:
             res += 1
+
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="two-by-two"><a class="header" href="#two-by-two">Two by Two</a></h1>
@@ -407,6 +410,7 @@ improvement, but this problem has no interesting solution anyway.</p>
             n //= res
         else:
             res += 2
+
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-2"><a class="header" href="#solution-2">Solution</a></h1>
@@ -445,6 +449,7 @@ number of the first one.</p>
         for y in range(x, 1000):
             if x * y &gt; res and is_palindrome(x * y):
                 res = x * y
+                
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="factorisation-is-the-key"><a class="header" href="#factorisation-is-the-key">Factorisation is the key</a></h1>
@@ -516,6 +521,7 @@ is evenly divisible by all numbers from 1 to 20.</p>
     for i in range(1, 21):
         if n % i != 0:
             return False
+        
     return True
 </code></pre>
 <p>Then iterate until you find a solution.</p>
@@ -524,6 +530,7 @@ is evenly divisible by all numbers from 1 to 20.</p>
     i = 1
     while not is_evenly_divisible(i):
         i += 1
+
     return i
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="prime-factorization"><a class="header" href="#prime-factorization">Prime factorization</a></h1>
@@ -562,6 +569,7 @@ than \( \sqrt{n} \) because it will always be 1.</p>
             res *= p**(floor(log_n / log(p)))
         else:
             res *= p
+
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-4"><a class="header" href="#solution-4">Solution</a></h1>

@@ -25,3 +25,8 @@
         - [Factorisation is the key](problems/problem_0004/solution2.md)
         - [With pen and paper](problems/problem_0004/solution3.md)
         - [Solution](problems/problem_0004/solution.md)
+    - [Problem 5: Smallest multiple](problems/problem_0005/problem.md)
+        - [Brute force](problems/problem_0005/solution1.md)
+        - [Prime factorization](problems/problem_0005/solution2.md)
+        - [Least common multiple](problems/problem_0005/solution3.md)
+        - [Solution](problems/problem_0005/solution.md)

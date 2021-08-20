@@ -10,7 +10,6 @@
         - [Three by three](problems/problem_0001/solution2.md)
         - [Summing everything](problems/problem_0001/solution3.md)
         - [Solution](problems/problem_0001/solution.md)
-
     - [Problem 2: even Fibonacci numbers](problems/problem_0002/problem.md)
         - [Brute force](problems/problem_0002/solution1.md)
         - [Fibonacci recurrence](problems/problem_0002/solution2.md)
@@ -30,3 +29,7 @@
         - [Prime factorization](problems/problem_0005/solution2.md)
         - [Least common multiple](problems/problem_0005/solution3.md)
         - [Solution](problems/problem_0005/solution.md)
+    - [Problem 6: Sum square difference](problems/problem_0006/problem.md)
+        - [Brute force](problems/problem_0006/solution1.md)
+        - [Summation formula](problems/problem_0006/solution2.md)
+        - [Solution](problems/problem_0006/solution.md)

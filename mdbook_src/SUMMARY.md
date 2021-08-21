@@ -33,3 +33,8 @@
         - [Brute force](problems/problem_0006/solution1.md)
         - [Summation formula](problems/problem_0006/solution2.md)
         - [Solution](problems/problem_0006/solution.md)
+    - [Problem 7: 10001st prime](problems/problem_0007/problem.md)
+        - [Brute force](problems/problem_0007/solution1.md)
+        - [Almost six by six](problems/problem_0007/solution2.md)
+        - [Prime number theorem](problems/problem_0007/solution3.md)
+        - [Solution](problems/problem_0007/solution.md)

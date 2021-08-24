@@ -6,3 +6,6 @@ book
 
 # Ignore custom script
 *sh
+
+# Ignore python cache
+__pycache__/*

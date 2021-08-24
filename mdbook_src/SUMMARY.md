@@ -38,3 +38,7 @@
         - [Almost six by six](problems/problem_0007/solution2.md)
         - [Prime number theorem](problems/problem_0007/solution3.md)
         - [Solution](problems/problem_0007/solution.md)
+    - [Problem 8: Largest product in a series](problems/problem_0008/problem.md)
+        - [Brute force](problems/problem_0008/solution1.md)
+        - [0 are useless](problems/problem_0008/solution2.md)
+        - [Solution](problems/problem_0008/solution.md)

@@ -42,3 +42,8 @@
         - [Brute force](problems/problem_0008/solution1.md)
         - [0 are useless](problems/problem_0008/solution2.md)
         - [Solution](problems/problem_0008/solution.md)
+    - [Problem 9: Special Pythagorean triplet](problems/problem_0009/problem.md)
+        - [Brute force](problems/problem_0009/solution1.md)
+        - [With a little thought](problems/problem_0009/solution2.md)
+        - [Prime Pythagorean triples](problems/problem_0009/solution3.md)
+        - [Solution](problems/problem_0009/solution.md)

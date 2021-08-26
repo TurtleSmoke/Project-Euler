@@ -40,7 +40,7 @@ We also know that \\( \frac{500}{m} \\) is an integer, so m must divide \\(
 The solution can also be found by using a for loop to find \\( m \\) and \\(
 n \\) with the above constraints.
 
-From [solution3.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0008/solution3.py):
+From [solution3.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0009/solution3.py):
 
 ```python
 def special_pythagorean_triplet():

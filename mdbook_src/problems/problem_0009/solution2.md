@@ -10,7 +10,7 @@ implies that \\( a \\), \\( b \\) and \\( c \\) are lower than 500, otherwise
 
 This gives us the following :
 
-From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0008/solution2.py):
+From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0009/solution2.py):
 
 ```python
 def special_pythagorean_triplet():

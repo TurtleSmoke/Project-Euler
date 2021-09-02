@@ -47,3 +47,8 @@
         - [With a little thought](problems/problem_0009/solution2.md)
         - [Prime Pythagorean triples](problems/problem_0009/solution3.md)
         - [Solution](problems/problem_0009/solution.md)
+    - [Problem 10: Summation of primes](problems/problem_0010/problem.md)
+        - [Brute force](problems/problem_0010/solution1.md)
+        - [Summation minus summation](problems/problem_0010/solution2.md)
+        - [Dynamic programming](problems/problem_0010/solution3.md)
+        - [Solution](problems/problem_0010/solution.md)

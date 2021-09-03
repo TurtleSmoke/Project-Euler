@@ -52,3 +52,6 @@
         - [Summation minus summation](problems/problem_0010/solution2.md)
         - [Dynamic programming](problems/problem_0010/solution3.md)
         - [Solution](problems/problem_0010/solution.md)
+    - [Problem 11: Largest product in a grid](problems/problem_0011/problem.md)
+        - [Brute force](problems/problem_0011/solution1.md)
+        - [Solution](problems/problem_0011/solution.md)

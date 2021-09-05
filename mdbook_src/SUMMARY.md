@@ -55,3 +55,7 @@
     - [Problem 11: Largest product in a grid](problems/problem_0011/problem.md)
         - [Brute force](problems/problem_0011/solution1.md)
         - [Solution](problems/problem_0011/solution.md)
+    - [Problem 12: Highly divisible triangular number](problems/problem_0012/problem.md)
+        - [Brute force](problems/problem_0012/solution1.md)
+        - [Common factor](problems/problem_0012/solution2.md)
+        - [Solution](problems/problem_0012/solution.md)

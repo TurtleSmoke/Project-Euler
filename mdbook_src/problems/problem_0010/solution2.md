@@ -10,7 +10,7 @@ The sum of the primes less than \\( 10 \\) is the sum of the numbers less than
 plus the primes themselves minus \\( 1 \\). In this example, the sum of the
 multiples of \\( 2 \\) and \\( 3 \\):
 
-\\[ \begin{align} P &= 1+2+3+4+5+6+7+8+9+10\\\\ &- (\ +2\ \ \ \ \ \ \ +4\ \ \ \ \ \ \ +6\ \ \ \ \ \ +8\ \ \ \ \ \ \ +10)\\\\ &- (\ \ \ \ \ \ \ +3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +6\ \ \ \ \ \ \ \ \ \ \ \ \ +9) \ \ \ \ \ \ \ \ \ +6\\\\ &+ 2 + 3 - 1\\\\ \end{align} \\]
+\\[ \begin{alignat}{1} P &&= &&+1&&+2&&+3&&+4&&+5&&+6+7&&+8&&+9&&+10\\\\ &&&&&&-2&&&&-4&&&&-6&&-8&&&&-10\\\\ &&&&&&&&-3&&&&&&-6&&&&-9\\\\ &&&&-1&&+2&&+3\\\\ P &&= &&&&+2&&+3&&&&+5&&-6+7\\\\ \end{alignat} \\]
 
 There is just one problem, the number \\( 6 \\) is both a multiple of \\( 2 \\)
 and \\( 3 \\). This means we have to remove the multiple of \\( 3 \\) but not

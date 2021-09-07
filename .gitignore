@@ -8,4 +8,4 @@ book
 *sh
 
 # Ignore python cache
-__pycache__/*
+__pycache__

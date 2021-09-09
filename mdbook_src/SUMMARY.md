@@ -59,3 +59,6 @@
         - [Brute force](problems/problem_0012/solution1.md)
         - [Common factor](problems/problem_0012/solution2.md)
         - [Solution](problems/problem_0012/solution.md)
+    - [Problem 13: Large sum](problems/problem_0013/problem.md)
+        - [Brute force](problems/problem_0013/solution1.md)
+        - [Solution](problems/problem_0013/solution.md)

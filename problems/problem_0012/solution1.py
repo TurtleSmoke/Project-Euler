@@ -1,4 +1,4 @@
-def number_of_divisors(n):
+def number_of_factors(n):
     res = 1
     for i in range(2, n):
         if n % i == 0:
@@ -9,7 +9,7 @@ def number_of_divisors(n):
 def highly_div_triangular_number(n=500):
     i = 1
     res = 1
-    while number_of_divisors(res) < n:
+    while number_of_factors(res) < n:
         i += 1
         res += i
 

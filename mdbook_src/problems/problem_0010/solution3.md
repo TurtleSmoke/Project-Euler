@@ -26,7 +26,7 @@ you solve the problem):
 > equal than \\( m \\). That is \\( S(v,m) \\) is the sum of integers up to
 > \\( v \\) that are either prime or the product of primes larger than \\( m
 > \\).
-
+>
 > \\( S(v, p) \\) is equal to \\(S(v, p-1) \\) if \\( p \\) is not prime or
 > \\( v \\) is smaller than \\( p\*p \\). Otherwise (\\( p \\) prime, \\(
 > p\*p\leqslant v \\)) \\( S(v,p) \\) can be computed from \\(S(v, p-1)\\)
@@ -34,10 +34,10 @@ you solve the problem):
 > \\). An integer is removed in this step if it is the product of \\(p \\)
 > with another integer that has no divisor smaller than \\(p \\). This can
 > be expressed as
-
+>
 > \\[ S\left(v, p \right) = S\left(v, p - 1\right) - p\left(S\left(\frac{v}{p},
 > p - 1\right) -S\left(p-1, p-1\right)\right) \\]
-
+>
 > Dynamic programming can be used to implement this. It is sufficient to
 > compute \\( S(v,p) \\) for all positive integers \\( v \\) that are
 > representable as \\( \left\lfloor\frac{n}{k}\right\rfloor \\) for some

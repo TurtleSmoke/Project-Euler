@@ -62,7 +62,7 @@
     - [Problem 13: Large sum](problems/problem_0013/problem.md)
         - [Brute force](problems/problem_0013/solution1.md)
         - [Solution](problems/problem_0013/solution.md)
-    - [Longest Collatz sequence](problems/problem_0014/problem.md)
+    - [Problem 14: Longest Collatz sequence](problems/problem_0014/problem.md)
         - [Brute force](problems/problem_0014/solution1.md)
         - [Caching](problems/problem_0014/solution2.md)
         - [Solution](problems/problem_0014/solution.md)

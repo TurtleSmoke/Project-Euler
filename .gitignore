@@ -9,3 +9,6 @@ book
 
 # Ignore python cache
 __pycache__
+
+# Ignore draw.io images
+*.drawio

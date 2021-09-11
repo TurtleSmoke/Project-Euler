@@ -16,7 +16,7 @@ In our case, when calculating the number of iteration of \\( n \\), we first
 look if the value has already been computed, if not, we update the cache 
 using the formula.
 
-from [solution2.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution2.py):
+From [solution2.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution2.py):
 
 ```python
 def longest_collatz_sequence(n=1000000):

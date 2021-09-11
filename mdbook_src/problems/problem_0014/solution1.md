@@ -19,7 +19,7 @@ def collatz(n):
 Then, just check the iteration for each starting number from 1 to 1000000 and
 return the largest.
 
-from [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution1.py):
+From [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution1.py):
 
 ```python
 def longest_collatz_sequence(n=1000000):

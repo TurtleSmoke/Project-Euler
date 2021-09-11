@@ -66,3 +66,8 @@
         - [Brute force](problems/problem_0014/solution1.md)
         - [Caching](problems/problem_0014/solution2.md)
         - [Solution](problems/problem_0014/solution.md)
+    - [Problem 15: Lattice paths](problems/problem_0015/problem.md)
+        - [Brute force](problems/problem_0015/solution1.md)
+        - [Dynamic programming](problems/problem_0015/solution2.md)
+        - [Combination](problems/problem_0015/solution3.md)
+        - [Solution](problems/problem_0015/solution.md)

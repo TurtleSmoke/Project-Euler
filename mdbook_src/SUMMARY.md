@@ -1,9 +1,6 @@
 # Summary
 
 - [Introduction](introduction/introduction.md)
-    - [Purpose](introduction/purpose.md)
-    - [Usage](introduction/usage.md)
-    - [Contributing](introduction/contributing.md)
 - [Project Euler](problems/project_euler.md)
     - [Problem 1: Multiples of 3 and 5](problems/problem_0001/problem.md)
         - [Brute force](problems/problem_0001/solution1.md)
@@ -71,3 +68,5 @@
         - [Dynamic programming](problems/problem_0015/solution2.md)
         - [Combination](problems/problem_0015/solution3.md)
         - [Solution](problems/problem_0015/solution.md)
+- [Usage](usage/usage.md)
+- [Contributing](contributing/contributing.md)

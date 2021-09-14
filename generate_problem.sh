@@ -14,8 +14,12 @@ echo -e "# ["$problemTitle"](https://projecteuler.net/problem=$problemNumber)\n\
 echo -e "# Brute force" >> mdbook_src/problems/problem_"$1"/solution1.md
 echo -e "# Solution\n---\n\n> \n\n---" >> mdbook_src/problems/problem_"$1"/solution.md
 
+last_lines="$(tail -n 2 mdbook_src/SUMMARY.md)"
+
+echo "$(head -n -2 mdbook_src/SUMMARY.md)" > mdbook_src/SUMMARY.md
 echo "    - [Problem "$problemNumber": "$problemTitle"](problems/problem_"$1"/problem.md)" >> mdbook_src/SUMMARY.md
 echo "        - [Brute force](problems/problem_"$1"/solution1.md)" >> mdbook_src/SUMMARY.md
 echo "        - [Solution](problems/problem_"$1"/solution.md)" >> mdbook_src/SUMMARY.md
+echo "$last_lines" >> mdbook_src/SUMMARY.md
 
 echo -e "\n\nif __name__ == \"__main__\":\n    print()" > problems/problem_"$1"/solution1.py

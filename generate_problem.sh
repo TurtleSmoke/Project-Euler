@@ -22,4 +22,6 @@ echo "        - [Brute force](problems/problem_"$1"/solution1.md)" >> mdbook_src
 echo "        - [Solution](problems/problem_"$1"/solution.md)" >> mdbook_src/SUMMARY.md
 echo "$last_lines" >> mdbook_src/SUMMARY.md
 
-echo -e "\n\nif __name__ == \"__main__\":\n    print()" > problems/problem_"$1"/solution1.py
+problemFunction=$(echo "$problemTitle" | sed 's/[ -]/_/g' | tr '[:upper:]' '[:lower:]')
+
+echo -e "def "$problemFunction"():\n\nif __name__ == \"__main__\":\n    print("$problemFunction"())" > problems/problem_"$1"/solution1.py

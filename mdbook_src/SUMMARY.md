@@ -68,5 +68,8 @@
         - [Dynamic programming](problems/problem_0015/solution2.md)
         - [Combination](problems/problem_0015/solution3.md)
         - [Solution](problems/problem_0015/solution.md)
+    - [Problem 16: Power digit sum](problems/problem_0016/problem.md)
+        - [Brute force](problems/problem_0016/solution1.md)
+        - [Solution](problems/problem_0016/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

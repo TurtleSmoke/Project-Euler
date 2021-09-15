@@ -74,8 +74,13 @@
     - [Problem 17: Number letter counts](problems/problem_0017/problem.md)
         - [Brute force](problems/problem_0017/solution1.md)
         - [Solution](problems/problem_0017/solution.md)
+    - [Problem 18: Maximum path sum I](problems/problem_0018/problem.md)
+        - [Brute force](problems/problem_0018/solution1.md)
+        - [Dynamic programming](problems/problem_0018/solution2.md)
+        - [Solution](problems/problem_0018/solution.md)
     - [Problem 19: Counting Sundays](problems/problem_0019/problem.md)
         - [Brute force](problems/problem_0019/solution1.md)
         - [Solution](problems/problem_0019/solution.md)
+>>>>>>> docs(p18): solution to problem 0018
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

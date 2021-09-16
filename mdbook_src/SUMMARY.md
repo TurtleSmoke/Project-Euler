@@ -71,5 +71,8 @@
     - [Problem 16: Power digit sum](problems/problem_0016/problem.md)
         - [Brute force](problems/problem_0016/solution1.md)
         - [Solution](problems/problem_0016/solution.md)
+    - [Problem 19: Counting Sundays](problems/problem_0019/problem.md)
+        - [Brute force](problems/problem_0019/solution1.md)
+        - [Solution](problems/problem_0019/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

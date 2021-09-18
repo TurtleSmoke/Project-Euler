@@ -81,6 +81,9 @@
     - [Problem 19: Counting Sundays](problems/problem_0019/problem.md)
         - [Brute force](problems/problem_0019/solution1.md)
         - [Solution](problems/problem_0019/solution.md)
->>>>>>> docs(p18): solution to problem 0018
+    - [Problem 20: Factorial digit sum](problems/problem_0020/problem.md)
+        - [Brute force](problems/problem_0020/solution1.md)
+        - [Solution](problems/problem_0020/solution.md)
+>>>>>>> docs(p20): solution to problem 0020
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

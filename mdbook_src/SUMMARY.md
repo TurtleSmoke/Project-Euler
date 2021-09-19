@@ -87,5 +87,8 @@
     - [Problem 21: Amicable numbers](problems/problem_0021/problem.md)
         - [Brute force](problems/problem_0021/solution1.md)
         - [Solution](problems/problem_0021/solution.md)
+    - [Problem 22: Names scores](problems/problem_0022/problem.md)
+        - [Brute force](problems/problem_0022/solution1.md)
+        - [Solution](problems/problem_0022/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

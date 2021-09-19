@@ -5,7 +5,7 @@ some word several times. For example, the word "hundred" is used 900 times from
 100 to 999, this allows some factoring. We can do the same for the number from 1
 to 9, for "and", for 10, 20, 30, ...
 
-From [solution17.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0001/solution17.py):
+From [solution17.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_00017/solution17.py):
 
 ```python
 def number_letter_counts():

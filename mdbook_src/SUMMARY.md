@@ -84,5 +84,8 @@
     - [Problem 20: Factorial digit sum](problems/problem_0020/problem.md)
         - [Brute force](problems/problem_0020/solution1.md)
         - [Solution](problems/problem_0020/solution.md)
+    - [Problem 21: Amicable numbers](problems/problem_0021/problem.md)
+        - [Brute force](problems/problem_0021/solution1.md)
+        - [Solution](problems/problem_0021/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

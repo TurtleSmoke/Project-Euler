@@ -7,7 +7,7 @@
 > Although mathematics will help you arrive at elegant and efficient methods,
 > the use of a computer and programming skills will be required to solve
 > most problems.
-
+>
 > The motivation for starting Project Euler, and its continuation, is to
 > provide a platform for the inquiring mind to delve into unfamiliar areas
 > and learn new concepts in a fun and recreational context.
@@ -18,7 +18,7 @@
 > feeding their hunger to learn, adults whose background was not primarily
 > mathematics but had an interest in things mathematical, and professionals
 > who want to keep their problem solving and mathematics on the cutting edge.
-
+>
 > Currently we have 1036139 registered members who have solved at least one
 > problem, representing 220 locations throughout the world, and collectively
 > using 108 different programming langues to solve the problems.
@@ -35,15 +35,18 @@
 
 > In order to track your progress it is necessary to setup an account and
 > have Cookies enabled.
-
-> If you already have an account, then Sign In. Otherwise, please Register –
-> it's completely free!
+>
+> If you already have an account, then
+> [Sign In](https://projecteuler.net/sign_in). Otherwise, please
+> [Register](https://projecteuler.net/register) – it's completely free!
 > However, as the problems are challenging, then you may wish to view the
-> Problems before registering.
+> [Problems](https://projecteuler.net/archives) before registering.
 
 ---
 
-Project Euler exists to encourage, challenge, and develop the skills and
-enjoyment of anyone with an interest in the fascinating world of mathematics.
+<p style="text-align: center; font-size: 125%; font-style: italic; color: #bbb">
+Project Euler exists to encourage, challenge, and develop the skills 
+and enjoyment of anyone with an interest in the fascinating world of mathematics.
+</p>
 
 ---

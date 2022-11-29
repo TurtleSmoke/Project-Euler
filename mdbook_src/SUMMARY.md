@@ -131,5 +131,8 @@
     - [Problem 32: Pandigital products](problems/problem_0032/problem.md)
         - [Brute force](problems/problem_0032/solution1.md)
         - [Solution](problems/problem_0032/solution.md)
+    - [Problem 33: Digit cancelling fractions](problems/problem_0033/problem.md)
+        - [Brute force](problems/problem_0033/solution1.md)
+        - [Solution](problems/problem_0033/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

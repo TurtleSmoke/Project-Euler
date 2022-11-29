@@ -128,5 +128,8 @@
         - [Dynamic programming](problems/problem_0031/solution2.md)
         - [Better dynamic programming](problems/problem_0031/solution3.md)
         - [Solution](problems/problem_0031/solution.md)
+    - [Problem 32: Pandigital products](problems/problem_0032/problem.md)
+        - [Brute force](problems/problem_0032/solution1.md)
+        - [Solution](problems/problem_0032/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

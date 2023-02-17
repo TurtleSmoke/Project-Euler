@@ -1,4 +1,4 @@
-def build_combination(d, n=0, s=''):
+def build_combination(d, n=0, s=""):
     if d == 0:
         yield s
     else:
@@ -8,7 +8,7 @@ def build_combination(d, n=0, s=''):
 
 
 def digit_fifth_powers():
-    cache = [i ** 5 for i in range(0, 10)]
+    cache = [i**5 for i in range(0, 10)]
     res = 0
     for n in build_combination(6):
         total = sum(cache[int(c)] for c in n)

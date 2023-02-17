@@ -23,7 +23,7 @@ For the first row and column, the number of different paths is one: either only
 downs or only rights. Then, we can simply compute the path to the other red
 points using the old ones, we simply return the value at the last cell.
 
-From [solution2.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution2.py):
+From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution2.py):
 
 ```python
 def lattice_paths(n=20):

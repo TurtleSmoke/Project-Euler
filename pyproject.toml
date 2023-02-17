@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "project-euler"
+version = "0.1.0"
+description = "Project Euler solution"
+authors = ["TurtleSmoke"]
+readme = "README.md"
+packages = [{include = "project_euler"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+sympy = "^1.11.1"
+scipy = "^1.9.3"
+pylint = "^2.15.8"
+black = "^22.12.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39']
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -14,11 +14,14 @@ def sum_of_factors(n):
     return res
 
 
-def non_abundant_sums():
-    abundants = [i for i in range(1, 28124) if sum_of_factors(i) > i]
-    is_sum = lambda i: any(a1 + a2 == i for a1 in abundants for a2 in abundants)
+def is_sum(i, abundant):
+    return any(a1 + a2 == i for a1 in abundant for a2 in abundant)
 
-    return sum(i for i in range(28124) if not is_sum(i))
+
+def non_abundant_sums():
+    abundant = [i for i in range(1, 28124) if sum_of_factors(i) > i]
+
+    return sum(i for i in range(28124) if not is_sum(i, abundant))
 
 
 if __name__ == "__main__":

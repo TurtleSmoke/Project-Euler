@@ -9,8 +9,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def is_pandigital(multiplicand, multiplier, product):
-    return sorted(str(multiplicand) + str(multiplier) + str(product)) == list(
-        "123456789")
+    return sorted(str(multiplicand) + str(multiplier) + str(product)) == list("123456789")
 ```
 
 One solution I really like uses a binary number to keep track of the digits.

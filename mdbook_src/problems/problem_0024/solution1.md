@@ -44,7 +44,7 @@ def lexicographic_permutations(s):
         yield s
     else:
         for i in range(len(s)):
-            for p in lexicographic_permutations(s[:i] + s[i + 1:]):
+            for p in lexicographic_permutations(s[:i] + s[i + 1 :]):
                 yield s[i] + p
 ```
 

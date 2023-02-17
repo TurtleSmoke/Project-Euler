@@ -8,7 +8,7 @@ def split_series(n):
 
 def largest_product_in_series(n, adj=13):
     res = 0
-    current = prod(int(digit) for digit in n[0: adj])
+    current = prod(int(digit) for digit in n[0:adj])
     for i in range(len(n) - adj):
         current = (current // int(n[i])) * int(n[i + adj])
         res = max(res, current)

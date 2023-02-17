@@ -5,7 +5,7 @@ def lexicographic_permutations(s, n):
     if len(s) <= 1:
         return s
     q, r = divmod(n, factorial(len(s) - 1))
-    return s[q] + lexicographic_permutations(s[:q] + s[q + 1:], r)
+    return s[q] + lexicographic_permutations(s[:q] + s[q + 1 :], r)
 
 
 if __name__ == "__main__":

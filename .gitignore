@@ -4,9 +4,6 @@ book
 # Ignore idea configuration files
 .idea/*
 
-# Ignore custom script
-*sh
-
 # Ignore python cache
 __pycache__
 

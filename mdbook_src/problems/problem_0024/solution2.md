@@ -34,12 +34,12 @@ We just have to find the quotient and remainder of our nth permutations, the
 divisor being the length of the string minus one. We can continue as long as our
 string contains more than one character.
 
-From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0024/solution2.py):
+From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0024/solution2.py):
 
 ```python
 def lexicographic_permutations(s, n):
     if len(s) <= 1:
         return s
     q, r = divmod(n, factorial(len(s) - 1))
-    return s[q] + lexicographic_permutations(s[:q] + s[q + 1:], r)
+    return s[q] + lexicographic_permutations(s[:q] + s[q + 1 :], r)
 ```

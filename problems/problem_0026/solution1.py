@@ -10,7 +10,7 @@ def find_cycle(n):
         if rest == 0:
             return 0
         if rest in seen:
-            print(n, i - seen[rest], (n if isprime(n) else ''))
+            print(n, i - seen[rest], (n if isprime(n) else ""))
             return i - seen[rest]
 
         seen[rest] = i

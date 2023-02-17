@@ -3,7 +3,7 @@ def sum_of_squares(n):
 
 
 def square_of_sum(n):
-    return sum(i for i in range(1, n + 1))**2
+    return sum(i for i in range(1, n + 1)) ** 2
 
 
 def sum_square_difference(n=100):

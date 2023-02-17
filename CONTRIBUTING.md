@@ -89,31 +89,6 @@ A branch name consists of a **type** and a **scope**, separated by dashes.
 <type>-<scope>
 ```
 
-## Pull Request Naming Convention
-
-The pull request title consists of a **type**, **scope** and **subject**:
-
-```
-<type>(<scope>): <subject>
-```
-
-There's no requirement for the comment.
-
-## Merge Commit Message Convention
-
-The merge commit message should be the **same as the pull request title**,
-followed by the **pull request number between parenthesis**.
-
-```
-type(<scope>): <subject> (#<pull request number>)
-```
-
-### Examples
-
-```
-chore(pre-commit): add pre-commit config and hooks (#42)
-```
-
 ## Issues
 
 There's no particular conventions for issues, provide as much information as

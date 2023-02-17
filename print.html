@@ -5,7 +5,10 @@
         <meta charset="UTF-8">
         <title>Project Euler</title>
         <meta name="robots" content="noindex" />
+
+
         <!-- Custom HTML head -->
+        
         <meta name="description" content="Solution of Project Euler problems">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -16,19 +19,23 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
@@ -85,7 +92,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -115,6 +122,7 @@
                         <a href="https://github.com/TurtleSmoke/Project-Euler" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -128,6 +136,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -217,7 +226,7 @@ them from the result.</p>
     sum_3 = sum(i for i in range(0, limit, 3) if i % 3 == 0)
     sum_5 = sum(i for i in range(0, limit, 5) if i % 5 == 0)
     sum_15 = sum(i for i in range(0, limit, 15) if i % 15 == 0)
-   
+
     return sum_3 + sum_5 - sum_15
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="summing-everything"><a class="header" href="#summing-everything">Summing everything</a></h1>
@@ -336,7 +345,7 @@ equation:</p>
 <pre><code class="language-python">def sum_of_even_fibonacci_numbers(limit=4000000):
     golden_ratio = (1 + sqrt(5)) / 2
     n = floor(log(sqrt(5) * limit) / log(golden_ratio))
-    fn = round((golden_ratio**(n + 2)) / sqrt(5))
+    fn = round((golden_ratio ** (n + 2)) / sqrt(5))
 
     return (fn - 1) // 2
 </code></pre>
@@ -417,7 +426,7 @@ number of the first one.</p>
         for y in range(x, 1000):
             if x * y &gt; res and is_palindrome(x * y):
                 res = x * y
-                
+
     return res
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="factorisation-is-the-key"><a class="header" href="#factorisation-is-the-key">Factorisation is the key</a></h1>
@@ -487,7 +496,7 @@ is evenly divisible by all numbers from 1 to 20.</p>
     for i in range(1, 21):
         if n % i != 0:
             return False
-        
+
     return True
 </code></pre>
 <p>Then iterate until you find a solution.</p>
@@ -524,7 +533,7 @@ which is:</p>
 <p>\[ \prod p^{\left\lfloor \frac{\log(N)}{\log(p)} \right\rfloor } \]</p>
 <p>We also know that it's pointless to search the maximum power of primes greater
 than \( \sqrt{n} \) because it will always be 1.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0005/solution2.py">solution2.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0005/solution3.py">solution3.py</a>:</p>
 <pre><code class="language-python">def smallest_multiple(n=20):
     # Returns a list of all primes &lt;= n
     primes = sieve.primerange(n + 1)
@@ -532,7 +541,7 @@ than \( \sqrt{n} \) because it will always be 1.</p>
     res = 1
     for p in primes:
         if p &lt; sqrt_n:
-            res *= p**(floor(log_n / log(p)))
+            res *= p ** (floor(log_n / log(p)))
         else:
             res *= p
 
@@ -566,7 +575,7 @@ required two steps:</p>
 <p>And the square of the sum:</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0006/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def square_of_sum(n):
-    return sum(i for i in range(1, n + 1))**2
+    return sum(i for i in range(1, n + 1)) ** 2
 </code></pre>
 <p>Finally, just subtract the square of the sum by the sum of the squares:</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0006/solution1.py">solution1.py</a>:</p>
@@ -690,7 +699,7 @@ we will use the
 <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.lambertw.html">lambertw</a>
 from <a href="https://docs.scipy.org/doc/scipy/index.html">scipy</a> to determine our upper
 bound.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0007/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0007/solution3.py">solution3.py</a>:</p>
 <pre><code class="language-python">def n_th_prime(n=10001):
     if n &lt; 3:
         return [2, 3][n - 1]
@@ -739,7 +748,7 @@ Then, simply repeat this step for all 13 adjacent digits contained in the
 <pre><code class="language-python">def largest_product_in_series(n, adj=13):
     res = 0
     for i in range(len(n) - adj):
-        res = max(prod(int(digit) for digit in n[i: i + adj]), res)
+        res = max(prod(int(digit) for digit in n[i : i + adj]), res)
 
     return res
 </code></pre>
@@ -767,7 +776,7 @@ before, so we can assume our number will never contain the digit 0.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0008/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def largest_product_in_series(n, adj=13):
     res = 0
-    current = prod(int(digit) for digit in n[0: adj])
+    current = prod(int(digit) for digit in n[0:adj])
     for i in range(len(n) - adj):
         current = (current // int(n[i])) * int(n[i + adj])
         res = max(res, current)
@@ -808,7 +817,7 @@ and \( c \) and stop when the above equations are true.</p>
             for c in range(b + 1, 1001):
                 if a + b + c == 1000 and a**2 + b**2 == c**2:
                     return a * b * c
-               
+
     return -1
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="with-a-little-thought"><a class="header" href="#with-a-little-thought">With a little thought</a></h1>
@@ -905,10 +914,10 @@ the multiple of \( 6 \). For numbers larger than 10, if we continue with \( 5
 <p>Where \( p_k \) is the k-th prime.</p>
 <p>We can create a function to find \( T_k \) if we have \( p_k \):</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0010/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">def tk(n, k):
+<pre><code class="language-python">def tk(n, k, primes):
     pk = primes[k - 1]
     t0 = phi(floor(n / pk))
-    tn = sum([tk(n / pk, i) for i in range(1, k)])
+    tn = sum(tk(n / pk, i, primes) for i in range(1, k))
     return pk * (t0 - tn)
 </code></pre>
 <p>The sum of the primes less than \( n \) is the sum of the numbers less than
@@ -916,18 +925,10 @@ the multiple of \( 6 \). For numbers larger than 10, if we continue with \( 5
 {n} \) plus the primes themselves minus \( 1 \):</p>
 <p>\[ \left(T_0(n) - T_1(n) - \dots - T_k(n)\right) + \left(p_1 + p_2 + \dots + p_k\right) - 1 \]</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0010/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">def summation_of_primes(limit=2000000):
-    phi = lambda x: x * (x + 1) // 2
+<pre><code class="language-python">def summation_of_primes(limit=2000):
     primes = list(sieve.primerange(floor(sqrt(limit)) + 1))
 
-    def tk(n, k):
-        pk = primes[k - 1]
-        t0 = phi(floor(n / pk))
-        tn = sum([tk(n / pk, i) for i in range(1, k)])
-        return pk * (t0 - tn)
-
-    return phi(limit) - sum([tk(limit, i + 1) for i in range(len(primes))]) \
-           + sum(primes) - 1
+    return phi(limit) - sum(tk(limit, i + 1, primes) for i in range(len(primes))) + sum(primes) - 1
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dynamic-programming"><a class="header" href="#dynamic-programming">Dynamic programming</a></h1>
 <p>The <a href="problems/problem_0010/solution2.html">Summation minus summation</a> solution gives an interesting
@@ -977,7 +978,8 @@ integer \( k \) and all.</p>
             sp = S[p - 1]  # sum of primes smaller than p
             p2 = p * p
             for v in V:
-                if v &lt; p2: break
+                if v &lt; p2:
+                    break
                 S[v] -= p * (S[v // p] - sp)
     return S[n]
 </code></pre>
@@ -1175,7 +1177,7 @@ to get there:</p>
 </code></pre>
 <p>Then, just check the iteration for each starting number from 1 to 1000000 and
 return the largest.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0014/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def longest_collatz_sequence(n=1000000):
     res, max_it = 0, 0
     for i in range(1, n):
@@ -1198,7 +1200,7 @@ storing data so that future requests for that data can be served faster.</p>
 <p>In our case, when calculating the number of iteration of \( n \), we first
 look if the value has already been computed, if not, we update the cache 
 using the formula.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0014/solution2.py">solution2.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0014/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def longest_collatz_sequence(n=1000000):
     cache = {1: 1}
 
@@ -1237,7 +1239,7 @@ down we call the function recursively with the same number of moves to the
 right, but one less move down. When the number of move down is 1, the result is
 obviously 1: the only remaining path is the one to the right. The same can be
 done for the move to the right.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def lattice_paths(up=20, down=20):
     moves_down = lattice_paths(up, down - 1) if down &gt; 1 else 1
     moves_up = lattice_paths(up - 1, down) if up &gt; 1 else 1
@@ -1261,7 +1263,7 @@ above and paths on the left.</p>
 <p>For the first row and column, the number of different paths is one: either only
 downs or only rights. Then, we can simply compute the path to the other red
 points using the old ones, we simply return the value at the last cell.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution2.py">solution2.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def lattice_paths(n=20):
     n += 1
     paths = np.zeros((n, n), dtype=int)
@@ -1289,9 +1291,9 @@ n \) 'R' in a string of \( 2n \) characters. This is called
 a <a href="https://en.wikipedia.org/wiki/Combination">combination</a>, in our case, it's:</p>
 <p>\[ \begin{pmatrix} 2n\\ n \end{pmatrix} = \frac{\left(2n\right)!}{n!\left(2n - n\right)!} = \frac{\left (2n\right)!}{\left(n!\right)^2} \]</p>
 <p>This can be calculated using factorial:</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution2.py">solution2.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution3.py">solution3.py</a>:</p>
 <pre><code class="language-python">def lattice_paths(n=20):
-    return factorial(2 * n) // (factorial(n)**2)
+    return factorial(2 * n) // (factorial(n) ** 2)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-14"><a class="header" href="#solution-14">Solution</a></h1>
 <hr />
@@ -1308,7 +1310,7 @@ a <a href="https://en.wikipedia.org/wiki/Combination">combination</a>, in our ca
 <div style="break-before: page; page-break-before: always;"></div><h1 id="brute-force-15"><a class="header" href="#brute-force-15">Brute force</a></h1>
 <p>Thanks to python, the solution is trivial, we just need to sum the digits of a
 number, which can be done by casting it into a string and iterating on it.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0016/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0016/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def power_digit_sum(n=1000):
     return sum((int(d) for d in str(2**n)))
 </code></pre>
@@ -1329,7 +1331,7 @@ number, which can be done by casting it into a string and iterating on it.</p>
 some word several times. For example, the word &quot;hundred&quot; is used 900 times from
 100 to 999, this allows some factoring. We can do the same for the number from 1
 to 9, for &quot;and&quot;, for 10, 20, 30, ...</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_00017/solution17.py">solution17.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0017/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def number_letter_counts():
     unit = len(&quot;onetwothreefourfivesixseveneightnine&quot;)
     ten = len(&quot;teneleventwelvethirfourfifsixseveneighnine&quot;) + len(&quot;ten&quot;) * 7
@@ -1393,7 +1395,7 @@ maximum score is the current number plus the highest score by choosing the left
 or the right.</p>
 <p>It is enough to stop when we are outside the triangle, since the lower number is
 0, we can consider that leaving the triangle is like adding 0.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0018/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0018/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def maximum_path_sum_I(filename):
     triangle = read_file(filename)
 
@@ -1423,7 +1425,7 @@ can do the same with 4 and 6, which then gives the following triangle:</p>
 <p>This solution is much faster because it doesn't recalculate anything twice, it
 just chooses the best path from the end, since we don't need to know where we
 came from to find the best incoming path.</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0018/solution2.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0018/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def maximum_path_sum_I(filename):
     triangle = read_file(filename)
 
@@ -1461,7 +1463,7 @@ as a Tuesday, and iterate on each month, for example the first day of February
 1901 is Tuesday + \( 31\ \%\ 7 \), which is Friday. We could continue by
 taking leap year into account. But thanks to Python, we can solve this problem
 with a simpler solution:</p>
-<p>From <a href="https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0019/solution1.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0019/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def counting_sundays():
     res = 0
     for year in range(1901, 2001):
@@ -1577,8 +1579,7 @@ names in the list by its value.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0022/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def names_scores(filename):
     names = read_file(filename).sort()
-    return sum((i + 1) * sum(ord(c) - ord('A') + 1 for c in name)
-               for (i, name) in enumerate(names))
+    return sum((i + 1) * sum(ord(c) - ord(&quot;A&quot;) + 1 for c in name) for (i, name) in enumerate(names))
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-21"><a class="header" href="#solution-21">Solution</a></h1>
 <hr />
@@ -1612,7 +1613,7 @@ abundant numbers, our upper limit is therefore 28123.</p>
 pointless because we are searching for positive numbers only. An abundant number
 is a number that have a larger sum of divisors than itself. We already have a
 function to compute the sum of divisors, we just need to be aware that if \(
-\sqrt{n} \) divide \( n \), it onyl has to count once.</p>
+\sqrt{n} \) divide \( n \), it only has to count once.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def sum_of_factors(n):
     res = 1
@@ -1630,16 +1631,16 @@ function to compute the sum of divisors, we just need to be aware that if \(
 calculated earlier. The naive way to do this is to try every combination of two
 abundant numbers.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution1.py">solution1.py</a>:</p>
-<pre><code class="language-python">is_sum = lambda i: any(a1 + a2 == i for a1 in abundants for a2 in abundants)
+<pre><code class="language-python">def is_sum(i, abundant):
+    return any(a1 + a2 == i for a1 in abundant for a2 in abundant)
 </code></pre>
 <p>Finally, we just have to sum each number less than 28124 that is not the sum 
 of two abundant numbers.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def non_abundant_sums():
-    abundants = [i for i in range(1, 28124) if sum_of_factors(i) &gt; i]
-    is_sum = lambda i: any(a1 + a2 == 2 for a1 in abundants for a2 in abundants)
+    abundant = [i for i in range(1, 28124) if sum_of_factors(i) &gt; i]
 
-    return sum(i for i in range(28124) if not is_sum(i))
+    return sum(i for i in range(28124) if not is_sum(i, abundant))
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="set"><a class="header" href="#set">Set</a></h1>
 <p>The <a href="problems/problem_0023/solution1.html">Brute Force</a> solution is extremely slow, the biggest issue is
@@ -1652,9 +1653,6 @@ that's why using a <a href="https://en.wikipedia.org/wiki/Set_(abstract_data_typ
 to store our abundant is more efficient in our this case. We just need to
 iterate over all abundant once and check if \( n \) minus this abundant is
 also in the set.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">any((i - a1 in abundants) for a1 in abundants)
-</code></pre>
 <p>We can also improve the way we build this set of abundant numbers. Since we have
 an upper bound, we can construct the sum of divisors of all these numbers at
 once. For every \( i \) and \( j \) such that \( i \times j &lt; limit \),
@@ -1666,30 +1664,28 @@ once.</p>
 from \( i + 1 \) (to avoid the case where \( i = j \)) to \( i \times j &gt;
 limit \Leftrightarrow j &gt; \left\lfloor \frac{limit}{i} \right\rfloor \).</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">sum_of_factors = [1] * (n + 1)
-for i in range(2, floor(sqrt(n)) + 1):
-    sum_of_factors[i * i] += i
-    for j in range(i + 1, (n // i) + 1):
-        sum_of_factors[i * j] += i + j
-</code></pre>
-<p>In the previous solution, we first built the list of abundant numbers and then
-searched for the number that was not a sum of two of them, since we always have
-\( a_1 &lt;= a_2 \) we can actually do both at the same time.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">def non_abundant_sums(n=28123):
+<pre><code class="language-python">def get_sum_of_factors(n):
     sum_of_factors = [1] * (n + 1)
     for i in range(2, floor(sqrt(n)) + 1):
         sum_of_factors[i * i] += i
         for j in range(i + 1, (n // i) + 1):
             sum_of_factors[i * j] += i + j
 
-    abundants = set()
+    return sum_of_factors
+</code></pre>
+<p>In the previous solution, we first built the list of abundant numbers and then
+searched for the number that was not a sum of two of them, since we always have
+\( a_1 &lt;= a_2 \) we can actually do both at the same time.</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
+<pre><code class="language-python">def non_abundant_sums(n=28123):
+    sum_of_factors = get_sum_of_factors(n)
+    abundant = set()
     res = 0
 
     for i in range(1, n + 1):
         if sum_of_factors[i] &gt; i:
-            abundants.add(i)
-        if not any((i - a1 in abundants) for a1 in abundants):
+            abundant.add(i)
+        if all((i - a1 not in abundant) for a1 in abundant):
             res += i
 
     return res
@@ -1737,7 +1733,7 @@ recursively.</p>
         yield s
     else:
         for i in range(len(s)):
-            for p in lexicographic_permutations(s[:i] + s[i + 1:]):
+            for p in lexicographic_permutations(s[:i] + s[i + 1 :]):
                 yield s[i] + p
 </code></pre>
 <p>By using <code>yield</code>, we create a generator, it's better than storing 1 million
@@ -1770,12 +1766,12 @@ the same reasoning, we can find that the first digit will be '1' after \( 1 *
 <p>We just have to find the quotient and remainder of our nth permutations, the
 divisor being the length of the string minus one. We can continue as long as our
 string contains more than one character.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0024/solution2.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0024/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def lexicographic_permutations(s, n):
     if len(s) &lt;= 1:
         return s
     q, r = divmod(n, factorial(len(s) - 1))
-    return s[q] + lexicographic_permutations(s[:q] + s[q + 1:], r)
+    return s[q] + lexicographic_permutations(s[:q] + s[q + 1 :], r)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-23"><a class="header" href="#solution-23">Solution</a></h1>
 <hr />
@@ -1835,7 +1831,7 @@ n &amp; &gt;= \frac{\frac{\log(5)}{2} + 999}{\log(\varphi)}\\
 n &amp; = \left\lceil\frac{\frac{\log(5)}{2} + 999}{\log(\varphi)} \right\rceil\\ \end{align} \]</p>
 <p>Since n must be an integer, it is sufficient to take the ceiling from the
 previous equation.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0025/solution2.py">solution1.py</a>:</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0025/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def thousandth_digit_fibonacci_number(n=1000):
     return ceil((n - 1 + log10(sqrt(5)) / 2) / log10((1 + sqrt(5)) / 2))
 </code></pre>
@@ -2383,8 +2379,9 @@ combinations, always add piece larger than or equal to the last one.</li>
         if accumulator &gt; n:
             return 0
 
-        return sum(coin_sums_rec(accumulator + coins[new_piece], new_piece)
-                   for new_piece in range(minimum_piece, len(coins)))
+        return sum(
+            coin_sums_rec(accumulator + coins[new_piece], new_piece) for new_piece in range(minimum_piece, len(coins))
+        )
 
     return coin_sums_rec(0, 0)
 </code></pre>
@@ -2502,8 +2499,7 @@ being to convert the triplet to a single sorted string and compare it to
 &quot;123456789&quot;.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0032/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def is_pandigital(multiplicand, multiplier, product):
-    return sorted(str(multiplicand) + str(multiplier) + str(product)) == list(
-        &quot;123456789&quot;)
+    return sorted(str(multiplicand) + str(multiplier) + str(product)) == list(&quot;123456789&quot;)
 </code></pre>
 <p>One solution I really like uses a binary number to keep track of the digits.
 This is faster than converting the triplet to a string and uses less memory
@@ -2567,27 +2563,37 @@ please see <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/READM
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
+
+
+
         <script>
             window.playground_copyable = true;
         </script>
+
+
         <script src="elasticlunr.min.js"></script>
         <script src="mark.min.js"></script>
         <script src="searcher.js"></script>
+
         <script src="clipboard.min.js"></script>
         <script src="highlight.js"></script>
         <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
+
         <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
@@ -2595,5 +2601,7 @@ please see <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/READM
             });
         });
         </script>
+
+    </div>
     </body>
 </html>

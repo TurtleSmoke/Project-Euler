@@ -4,7 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Set - Project Euler</title>
+
+
         <!-- Custom HTML head -->
+        
         <meta name="description" content="Solution of Project Euler problems">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -15,19 +18,23 @@
         <link rel="stylesheet" href="../../css/general.css">
         <link rel="stylesheet" href="../../css/chrome.css">
         <link rel="stylesheet" href="../../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../highlight.css">
         <link rel="stylesheet" href="../../tomorrow-night.css">
         <link rel="stylesheet" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../../";
@@ -84,7 +91,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -114,6 +121,7 @@
                         <a href="https://github.com/TurtleSmoke/Project-Euler" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -127,6 +135,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -149,9 +158,6 @@ that's why using a <a href="https://en.wikipedia.org/wiki/Set_(abstract_data_typ
 to store our abundant is more efficient in our this case. We just need to
 iterate over all abundant once and check if \( n \) minus this abundant is
 also in the set.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">any((i - a1 in abundants) for a1 in abundants)
-</code></pre>
 <p>We can also improve the way we build this set of abundant numbers. Since we have
 an upper bound, we can construct the sum of divisors of all these numbers at
 once. For every \( i \) and \( j \) such that \( i \times j &lt; limit \),
@@ -163,30 +169,28 @@ once.</p>
 from \( i + 1 \) (to avoid the case where \( i = j \)) to \( i \times j &gt;
 limit \Leftrightarrow j &gt; \left\lfloor \frac{limit}{i} \right\rfloor \).</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">sum_of_factors = [1] * (n + 1)
-for i in range(2, floor(sqrt(n)) + 1):
-    sum_of_factors[i * i] += i
-    for j in range(i + 1, (n // i) + 1):
-        sum_of_factors[i * j] += i + j
-</code></pre>
-<p>In the previous solution, we first built the list of abundant numbers and then
-searched for the number that was not a sum of two of them, since we always have
-\( a_1 &lt;= a_2 \) we can actually do both at the same time.</p>
-<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
-<pre><code class="language-python">def non_abundant_sums(n=28123):
+<pre><code class="language-python">def get_sum_of_factors(n):
     sum_of_factors = [1] * (n + 1)
     for i in range(2, floor(sqrt(n)) + 1):
         sum_of_factors[i * i] += i
         for j in range(i + 1, (n // i) + 1):
             sum_of_factors[i * j] += i + j
 
-    abundants = set()
+    return sum_of_factors
+</code></pre>
+<p>In the previous solution, we first built the list of abundant numbers and then
+searched for the number that was not a sum of two of them, since we always have
+\( a_1 &lt;= a_2 \) we can actually do both at the same time.</p>
+<p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py">solution2.py</a>:</p>
+<pre><code class="language-python">def non_abundant_sums(n=28123):
+    sum_of_factors = get_sum_of_factors(n)
+    abundant = set()
     res = 0
 
     for i in range(1, n + 1):
         if sum_of_factors[i] &gt; i:
-            abundants.add(i)
-        if not any((i - a1 in abundants) for a1 in abundants):
+            abundant.add(i)
+        if all((i - a1 not in abundant) for a1 in abundant):
             res += i
 
     return res
@@ -199,9 +203,11 @@ searched for the number that was not a sum of two of them, since we always have
                             <a rel="prev" href="../../problems/problem_0023/solution1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+
                             <a rel="next" href="../../problems/problem_0023/solution.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -211,6 +217,7 @@ searched for the number that was not a sum of two of them, since we always have
                     <a rel="prev" href="../../problems/problem_0023/solution1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+
                     <a rel="next" href="../../problems/problem_0023/solution.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -218,16 +225,25 @@ searched for the number that was not a sum of two of them, since we always have
 
         </div>
 
+
+
+
         <script>
             window.playground_copyable = true;
         </script>
+
+
         <script src="../../elasticlunr.min.js"></script>
         <script src="../../mark.min.js"></script>
         <script src="../../searcher.js"></script>
+
         <script src="../../clipboard.min.js"></script>
         <script src="../../highlight.js"></script>
         <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>

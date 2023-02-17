@@ -6,7 +6,7 @@ as a Tuesday, and iterate on each month, for example the first day of February
 taking leap year into account. But thanks to Python, we can solve this problem
 with a simpler solution:
 
-From [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0019/solution1.py):
+From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0019/solution1.py):
 
 ```python
 def counting_sundays():

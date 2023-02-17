@@ -1,3 +1,3 @@
 def read_file(filename):
-    with open(filename, 'r') as file:
-        return file.read().replace('\n', '')
+    with open(filename, "r") as file:
+        return file.read().replace("\n", "")

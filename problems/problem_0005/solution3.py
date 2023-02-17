@@ -2,6 +2,7 @@ from sympy import sieve
 from math import sqrt, log, floor
 
 
+# The code has been written to ensure consistency with the sample generation demonstrated in the solution explanation.
 def smallest_multiple(n=20):
     # Returns a list of all primes <= n
     primes = sieve.primerange(n + 1)

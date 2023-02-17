@@ -11,7 +11,8 @@ def partial_prime_sum(n=2000000):
             sp = S[p - 1]  # sum of primes smaller than p
             p2 = p * p
             for v in V:
-                if v < p2: break
+                if v < p2:
+                    break
                 S[v] -= p * (S[v // p] - sp)
     return S[n]
 

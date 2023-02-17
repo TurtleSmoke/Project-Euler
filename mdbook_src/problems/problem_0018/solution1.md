@@ -14,7 +14,7 @@ or the right.
 It is enough to stop when we are outside the triangle, since the lower number is
 0, we can consider that leaving the triangle is like adding 0.
 
-From [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0018/solution1.py):
+From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0018/solution1.py):
 
 ```python
 def maximum_path_sum_I(filename):

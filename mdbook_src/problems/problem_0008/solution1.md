@@ -27,7 +27,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 def largest_product_in_series(n, adj=13):
     res = 0
     for i in range(len(n) - adj):
-        res = max(prod(int(digit) for digit in n[i: i + adj]), res)
+        res = max(prod(int(digit) for digit in n[i : i + adj]), res)
 
     return res
 ```

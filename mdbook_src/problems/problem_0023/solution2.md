@@ -13,12 +13,6 @@ to store our abundant is more efficient in our this case. We just need to
 iterate over all abundant once and check if \\( n \\) minus this abundant is
 also in the set.
 
-From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py):
-
-```python
-any((i - a1 in abundants) for a1 in abundants)
-```
-
 We can also improve the way we build this set of abundant numbers. Since we have
 an upper bound, we can construct the sum of divisors of all these numbers at
 once. For every \\( i \\) and \\( j \\) such that \\( i \times j < limit \\),
@@ -34,11 +28,14 @@ limit \Leftrightarrow j > \left\lfloor \frac{limit}{i} \right\rfloor \\).
 From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution2.py):
 
 ```python
-sum_of_factors = [1] * (n + 1)
-for i in range(2, floor(sqrt(n)) + 1):
-    sum_of_factors[i * i] += i
-    for j in range(i + 1, (n // i) + 1):
-        sum_of_factors[i * j] += i + j
+def get_sum_of_factors(n):
+    sum_of_factors = [1] * (n + 1)
+    for i in range(2, floor(sqrt(n)) + 1):
+        sum_of_factors[i * i] += i
+        for j in range(i + 1, (n // i) + 1):
+            sum_of_factors[i * j] += i + j
+
+    return sum_of_factors
 ```
 
 In the previous solution, we first built the list of abundant numbers and then
@@ -49,19 +46,14 @@ From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def non_abundant_sums(n=28123):
-    sum_of_factors = [1] * (n + 1)
-    for i in range(2, floor(sqrt(n)) + 1):
-        sum_of_factors[i * i] += i
-        for j in range(i + 1, (n // i) + 1):
-            sum_of_factors[i * j] += i + j
-
-    abundants = set()
+    sum_of_factors = get_sum_of_factors(n)
+    abundant = set()
     res = 0
 
     for i in range(1, n + 1):
         if sum_of_factors[i] > i:
-            abundants.add(i)
-        if not any((i - a1 in abundants) for a1 in abundants):
+            abundant.add(i)
+        if all((i - a1 not in abundant) for a1 in abundant):
             res += i
 
     return res

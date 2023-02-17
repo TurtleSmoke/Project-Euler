@@ -21,6 +21,5 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 ```python
 def names_scores(filename):
     names = read_file(filename).sort()
-    return sum((i + 1) * sum(ord(c) - ord('A') + 1 for c in name)
-               for (i, name) in enumerate(names))
+    return sum((i + 1) * sum(ord(c) - ord("A") + 1 for c in name) for (i, name) in enumerate(names))
 ```

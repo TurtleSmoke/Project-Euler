@@ -19,7 +19,7 @@ So the \\( LCT \\) of \\( 1 \\) through \\( N \\) is:
 We also know that it's pointless to search the maximum power of primes greater
 than \\( \sqrt{n} \\) because it will always be 1.
 
-From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0005/solution2.py):
+From [solution3.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0005/solution3.py):
 
 ```python
 def smallest_multiple(n=20):
@@ -29,7 +29,7 @@ def smallest_multiple(n=20):
     res = 1
     for p in primes:
         if p < sqrt_n:
-            res *= p**(floor(log_n / log(p)))
+            res *= p ** (floor(log_n / log(p)))
         else:
             res *= p
 

@@ -17,7 +17,7 @@ n & = \left\lceil\frac{\frac{\log(5)}{2} + 999}{\log(\varphi)} \right\rceil\\\\ 
 Since n must be an integer, it is sufficient to take the ceiling from the
 previous equation.
 
-From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0025/solution2.py):
+From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0025/solution2.py):
 
 ```python
 def thousandth_digit_fibonacci_number(n=1000):

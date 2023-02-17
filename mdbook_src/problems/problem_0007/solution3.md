@@ -48,7 +48,7 @@ we will use the
 from [scipy](https://docs.scipy.org/doc/scipy/index.html) to determine our upper
 bound.
 
-From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0007/solution1.py):
+From [solution3.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0007/solution3.py):
 
 ```python
 def n_th_prime(n=10001):

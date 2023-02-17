@@ -1,6 +1,6 @@
 def number_letter_counts():
     unit = len("onetwothreefourfivesixseveneightnine")
-    ten = len("teneleventwelvethirfourfifsixseveneighnine") + len("teen") * 7
+    ten = len("teneleventwelvethirfourfifsixseveneighnine") + len("ten") * 7
     and_l = len("and")
     twenty = len("twentythirtyfortyfiftysixtyseventyeightyninety")
     hun = len("hundred")

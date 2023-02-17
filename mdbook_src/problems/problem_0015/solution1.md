@@ -16,7 +16,7 @@ right, but one less move down. When the number of move down is 1, the result is
 obviously 1: the only remaining path is the one to the right. The same can be
 done for the move to the right.
 
-From [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution1.py):
+From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution1.py):
 
 ```python
 def lattice_paths(up=20, down=20):

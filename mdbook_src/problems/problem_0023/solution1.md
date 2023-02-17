@@ -8,7 +8,7 @@ First, we need to find all the abundant number below 28123, going higher is
 pointless because we are searching for positive numbers only. An abundant number
 is a number that have a larger sum of divisors than itself. We already have a
 function to compute the sum of divisors, we just need to be aware that if \\(
-\sqrt{n} \\) divide \\( n \\), it onyl has to count once.
+\sqrt{n} \\) divide \\( n \\), it only has to count once.
 
 From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution1.py):
 
@@ -33,7 +33,8 @@ abundant numbers.
 From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0023/solution1.py):
 
 ```python
-is_sum = lambda i: any(a1 + a2 == i for a1 in abundants for a2 in abundants)
+def is_sum(i, abundant):
+    return any(a1 + a2 == i for a1 in abundant for a2 in abundant)
 ```
 
 Finally, we just have to sum each number less than 28124 that is not the sum 
@@ -43,8 +44,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def non_abundant_sums():
-    abundants = [i for i in range(1, 28124) if sum_of_factors(i) > i]
-    is_sum = lambda i: any(a1 + a2 == 2 for a1 in abundants for a2 in abundants)
+    abundant = [i for i in range(1, 28124) if sum_of_factors(i) > i]
 
-    return sum(i for i in range(28124) if not is_sum(i))
+    return sum(i for i in range(28124) if not is_sum(i, abundant))
 ```

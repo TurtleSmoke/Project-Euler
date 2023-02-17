@@ -3,7 +3,7 @@ def is_pandigital(multiplicand, multiplier, product):
 
 
 def is_pandigital2(multiplicand, multiplier, product):
-    digits = list()
+    digits = []
     for n in (multiplier, multiplicand, product):
         while n:
             digits.append(n % 10)

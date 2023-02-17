@@ -18,7 +18,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def square_of_sum(n):
-    return sum(i for i in range(1, n + 1))**2
+    return sum(i for i in range(1, n + 1)) ** 2
 ```
 
 Finally, just subtract the square of the sum by the sum of the squares:

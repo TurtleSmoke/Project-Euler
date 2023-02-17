@@ -17,9 +17,9 @@ a [combination](https://en.wikipedia.org/wiki/Combination), in our case, it's:
 
 This can be calculated using factorial:
 
-From [solution2.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0015/solution2.py):
+From [solution3.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0015/solution3.py):
 
 ```python
 def lattice_paths(n=20):
-    return factorial(2 * n) // (factorial(n)**2)
+    return factorial(2 * n) // (factorial(n) ** 2)
 ```

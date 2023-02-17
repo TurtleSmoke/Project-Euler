@@ -26,7 +26,7 @@ This solution is much faster because it doesn't recalculate anything twice, it
 just chooses the best path from the end, since we don't need to know where we
 came from to find the best incoming path.
 
-From [solution1.py](https://github.com/turtlesmoke/project-euler/blob/main/problems/problem_0018/solution2.py):
+From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0018/solution2.py):
 
 ```python
 def maximum_path_sum_I(filename):

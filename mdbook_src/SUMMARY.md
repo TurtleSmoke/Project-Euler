@@ -134,5 +134,8 @@
     - [Problem 33: Digit cancelling fractions](problems/problem_0033/problem.md)
         - [Brute force](problems/problem_0033/solution1.md)
         - [Solution](problems/problem_0033/solution.md)
+    - [Problem 34: Digit factorials](problems/problem_0034/problem.md)
+        - [Brute force](problems/problem_0034/solution1.md)
+        - [Solution](problems/problem_0034/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

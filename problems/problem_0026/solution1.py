@@ -21,5 +21,6 @@ def reciprocal_cycles(n=1000):
     return max(((find_cycle(i), i) for i in range(2, n)))[1]
 
 # Random update just to verify that poetry cache is working... pretty please?
+# Second test, just to be sure
 if __name__ == "__main__":
     print(reciprocal_cycles())

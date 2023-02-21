@@ -1,11 +1,6 @@
 name: Lint
 
 on:
-  push:
-    branches: [ main ]
-    paths:
-      - '**.py'
-      - '.pylintrc'
   pull_request:
     branches: [ main ]
     paths:
@@ -29,7 +24,13 @@ jobs:
           cache: 'poetry'
       - name: Install dependencies
         run: poetry install --no-root
+      - name: Get Python changed files
+        id: python-changed-files
+        uses: tj-actions/changed-files@v35
+        with:
+          files: |
+            **/*.py
       - name: Lint with pylint and black
         run: |
-          poetry run ./scripts/run_pylint.sh
-          poetry run ./scripts/run_black.sh
+          poetry run ./scripts/run_pylint.sh ${{ steps.python-changed-files.outputs.all_changed_and_modified_files }}
+          poetry run ./scripts/run_black.sh ${{ steps.python-changed-files.outputs.all_changed_and_modified_files }}

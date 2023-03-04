@@ -11,7 +11,7 @@ def remove_example(problem_id):
         keep = []
         current_line = 0
         while current_line < len(lines):
-            matches = re.match(r"From \[solution.*", lines[current_line])
+            matches = re.match(r"From \[.*\.py", lines[current_line])
             if matches:
                 match = re.match(r"def (\w+)", lines[current_line + 3])
                 keep.append(f"[//]: # ({match.group(1)})\n")

@@ -28,6 +28,8 @@ def generate_example(problem_id):
             if matches:
                 try:
                     solution, func_name = path.stem, matches.group(1)
+                    if func_name not in problem_sources[solution]:
+                        solution = "read_file"
                     src_code = problem_sources[solution][func_name]
                     lines[j] = (
                         f"From [{solution}.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_"

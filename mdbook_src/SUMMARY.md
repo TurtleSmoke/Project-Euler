@@ -166,5 +166,8 @@
     - [Problem 41: Pandigital prime](problems/problem_0041/problem.md)
         - [Brute force](problems/problem_0041/solution1.md)
         - [Solution](problems/problem_0041/solution.md)
+    - [Problem 42: Coded triangle numbers](problems/problem_0042/problem.md)
+        - [Brute force](problems/problem_0042/solution1.md)
+        - [Solution](problems/problem_0042/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

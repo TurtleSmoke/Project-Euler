@@ -11,8 +11,8 @@ From [read_file.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def read_file(filename):
-    with open(filename, 'r') as file:
-        return file.read().replace('\n', '')
+    with open(filename, "r") as file:
+        return file.read().replace("\n", "")
 ```
 
 Given this string, we need to calculate the product of 13 adjacent digits, which

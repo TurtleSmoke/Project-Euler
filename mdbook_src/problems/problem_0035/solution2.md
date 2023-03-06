@@ -14,8 +14,8 @@ From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 def circular_primes():
     res = 4
     for number_digits in range(2, 7):
-        for n in itertools.product('1379', repeat=number_digits):
-            if is_circular_prime(''.join(n)):
+        for n in itertools.product("1379", repeat=number_digits):
+            if is_circular_prime("".join(n)):
                 res += 1
     return res
 ```

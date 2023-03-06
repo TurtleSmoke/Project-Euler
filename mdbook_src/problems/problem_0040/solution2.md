@@ -64,6 +64,6 @@ From [solution2.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def champernownes_constant():
-    return reduce(operator.mul, (d(10 ** i) for i in range(7)))
+    return reduce(operator.mul, (d(10**i) for i in range(7)))
 ```
 

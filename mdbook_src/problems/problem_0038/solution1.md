@@ -13,7 +13,7 @@ def is_pandigital_multiples(seed):
         digits += str(seed * j)
         if len(digits) > 9:
             return -1
-        if len(digits) == 9 and set(digits) == set('123456789'):
+        if len(digits) == 9 and set(digits) == set("123456789"):
             return int(digits)
 ```
 

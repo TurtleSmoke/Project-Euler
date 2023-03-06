@@ -11,9 +11,10 @@ From [read_file.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def read_file(filename):
-    with open(filename, 'r') as file:
-        return [[int(x) for x in line.split(' ')] for line in
-                file.read().split('\n')[:-1]]  # Last element is an empty line
+    with open(filename, "r") as file:
+        return [
+            [int(x) for x in line.split(" ")] for line in file.read().split("\n")[:-1]
+        ]
 ```
 
 And then just iterate on this matrix:

@@ -159,8 +159,8 @@ Combining the <a href="https://docs.python.org/3/library/functools.html#functool
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0040/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def champernownes_constant():
     s = &quot;&quot;.join(str(i) for i in range(1, 1000000))
-    print([int(s[10 ** i - 1]) for i in range(7)])
-    return reduce(operator.mul, (int(s[10 ** i - 1]) for i in range(7)))
+    print([int(s[10**i - 1]) for i in range(7)])
+    return reduce(operator.mul, (int(s[10**i - 1]) for i in range(7)))
 </code></pre>
 
                     </main>

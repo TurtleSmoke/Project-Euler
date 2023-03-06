@@ -738,8 +738,8 @@ largest one.</p>
 number as a string and remove each trailing newline (\n):</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0008/read_file.py">read_file.py</a>:</p>
 <pre><code class="language-python">def read_file(filename):
-    with open(filename, 'r') as file:
-        return file.read().replace('\n', '')
+    with open(filename, &quot;r&quot;) as file:
+        return file.read().replace(&quot;\n&quot;, &quot;&quot;)
 </code></pre>
 <p>Given this string, we need to calculate the product of 13 adjacent digits, which
 can be done easily
@@ -1009,9 +1009,10 @@ input grid will be stored in a file, so the first step is to obtain this
 grid as int matrix.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0011/read_file.py">read_file.py</a>:</p>
 <pre><code class="language-python">def read_file(filename):
-    with open(filename, 'r') as file:
-        return [[int(x) for x in line.split(' ')] for line in
-                file.read().split('\n')[:-1]]  # Last element is an empty line
+    with open(filename, &quot;r&quot;) as file:
+        return [
+            [int(x) for x in line.split(&quot; &quot;)] for line in file.read().split(&quot;\n&quot;)[:-1]
+        ]
 </code></pre>
 <p>And then just iterate on this matrix:</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0011/solution1.py">solution1.py</a>:</p>
@@ -1571,7 +1572,7 @@ COLIN would obtain a score of \( 938 \times 53 = 49714 \).</p>
 around them.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0022/read_file.py">read_file.py</a>:</p>
 <pre><code class="language-python">def read_file(filename):
-    with open(filename, 'r') as file:
+    with open(filename, &quot;r&quot;) as file:
         return [name[1:-1] for name in file.read().split(&quot;,&quot;)]
 </code></pre>
 <p>Then we just need to sum the letters of the names by their position in the
@@ -2667,8 +2668,8 @@ rather than the previous 1,000,000.</p>
 <pre><code class="language-python">def circular_primes():
     res = 4
     for number_digits in range(2, 7):
-        for n in itertools.product('1379', repeat=number_digits):
-            if is_circular_prime(''.join(n)):
+        for n in itertools.product(&quot;1379&quot;, repeat=number_digits):
+            if is_circular_prime(&quot;&quot;.join(n)):
                 res += 1
     return res
 </code></pre>
@@ -2824,7 +2825,7 @@ Python's string functions make it easy to concatenate numbers, and a set is used
         digits += str(seed * j)
         if len(digits) &gt; 9:
             return -1
-        if len(digits) == 9 and set(digits) == set('123456789'):
+        if len(digits) == 9 and set(digits) == set(&quot;123456789&quot;):
             return int(digits)
 </code></pre>
 <p>The maximum value for the seed is 10000 because if we multiply 10000 by 1 and 2 and concatenate the results, we get a 10-digit number, which cannot be pandigital.
@@ -3014,8 +3015,8 @@ Combining the <a href="https://docs.python.org/3/library/functools.html#functool
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0040/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def champernownes_constant():
     s = &quot;&quot;.join(str(i) for i in range(1, 1000000))
-    print([int(s[10 ** i - 1]) for i in range(7)])
-    return reduce(operator.mul, (int(s[10 ** i - 1]) for i in range(7)))
+    print([int(s[10**i - 1]) for i in range(7)])
+    return reduce(operator.mul, (int(s[10**i - 1]) for i in range(7)))
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="foreshadowing"><a class="header" href="#foreshadowing">Foreshadowing</a></h1>
 <p>Although the <a href="problems/problem_0040/./solution1.html">Brute force</a> solution is fast, it will not scale well for larger values and is not an elegant solution.
@@ -3070,7 +3071,7 @@ Finally, we can extract the \( (n - (s(d) + k \times d))^{th} \) digit from this
 <p>The final solution is obtained by multiplying the digit with the index of the problem.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0040/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def champernownes_constant():
-    return reduce(operator.mul, (d(10 ** i) for i in range(7)))
+    return reduce(operator.mul, (d(10**i) for i in range(7)))
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="solution-39"><a class="header" href="#solution-39">Solution</a></h1>
 <hr />

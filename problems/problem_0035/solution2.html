@@ -160,8 +160,8 @@ rather than the previous 1,000,000.</p>
 <pre><code class="language-python">def circular_primes():
     res = 4
     for number_digits in range(2, 7):
-        for n in itertools.product('1379', repeat=number_digits):
-            if is_circular_prime(''.join(n)):
+        for n in itertools.product(&quot;1379&quot;, repeat=number_digits):
+            if is_circular_prime(&quot;&quot;.join(n)):
                 res += 1
     return res
 </code></pre>

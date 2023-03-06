@@ -157,9 +157,10 @@ input grid will be stored in a file, so the first step is to obtain this
 grid as int matrix.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0011/read_file.py">read_file.py</a>:</p>
 <pre><code class="language-python">def read_file(filename):
-    with open(filename, 'r') as file:
-        return [[int(x) for x in line.split(' ')] for line in
-                file.read().split('\n')[:-1]]  # Last element is an empty line
+    with open(filename, &quot;r&quot;) as file:
+        return [
+            [int(x) for x in line.split(&quot; &quot;)] for line in file.read().split(&quot;\n&quot;)[:-1]
+        ]
 </code></pre>
 <p>And then just iterate on this matrix:</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0011/solution1.py">solution1.py</a>:</p>

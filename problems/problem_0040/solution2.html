@@ -202,7 +202,7 @@ Finally, we can extract the \( (n - (s(d) + k \times d))^{th} \) digit from this
 <p>The final solution is obtained by multiplying the digit with the index of the problem.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0040/solution2.py">solution2.py</a>:</p>
 <pre><code class="language-python">def champernownes_constant():
-    return reduce(operator.mul, (d(10 ** i) for i in range(7)))
+    return reduce(operator.mul, (d(10**i) for i in range(7)))
 </code></pre>
 
                     </main>

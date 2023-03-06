@@ -160,7 +160,7 @@ Python's string functions make it easy to concatenate numbers, and a set is used
         digits += str(seed * j)
         if len(digits) &gt; 9:
             return -1
-        if len(digits) == 9 and set(digits) == set('123456789'):
+        if len(digits) == 9 and set(digits) == set(&quot;123456789&quot;):
             return int(digits)
 </code></pre>
 <p>The maximum value for the seed is 10000 because if we multiply 10000 by 1 and 2 and concatenate the results, we get a 10-digit number, which cannot be pandigital.

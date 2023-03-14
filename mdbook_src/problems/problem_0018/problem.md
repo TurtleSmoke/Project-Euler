@@ -1,41 +1,33 @@
 # [Maximum path sum I](https://projecteuler.net/problem=18)
 
-> By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
->
+> By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is \\( 23 \\).
+> 
 > \\[
-> \begin{gather}
-> \color{red}{3}\\\\
-> \color{red}{7}\quad 4\\\\
-> 2 \quad \color{red}{4}\quad 6\\\\
-> 8\quad 5\quad \color{red}{9}\quad 3\\\\
-> \end{gather}
+> \color{red}{3}\\\\\\\\
+> 2\ \color{red}{4}\ 6\\\\\\\\
+> 8\ 5\ \color{red}{9}\ 3
 > \\]
 > 
-> That is, 3 + 7 + 4 + 9 = 23.
->
+> That is, \\( 3+7+4+9=23 \\).
+> 
 > Find the maximum total from top to bottom of the triangle below:
->
+> 
 > \\[
-> \begin{gather}
-> 75\\\\
-> 95\quad 64\\\\
-> 17\quad 47\quad 82\\\\
-> 18\quad 35\quad 87\quad 10\\\\
-> 20\quad 04\quad 82\quad 47\quad 65\\\\
-> 19\quad 01\quad 23\quad 75\quad 03\quad 34\\\\
-> 88\quad 02\quad 77\quad 73\quad 07\quad 63\quad 67\\\\
-> 99\quad 65\quad 04\quad 28\quad 06\quad 16\quad 70\quad 92\\\\
-> 41\quad 41\quad 26\quad 56\quad 83\quad 40\quad 80\quad 70\quad 33\\\\
-> 41\quad 48\quad 72\quad 33\quad 47\quad 32\quad 37\quad 16\quad 94\quad 29\\\\
-> 53\quad 71\quad 44\quad 65\quad 25\quad 43\quad 91\quad 52\quad 97\quad 51\quad 14\\\\
-> 70\quad 11\quad 33\quad 28\quad 77\quad 73\quad 17\quad 78\quad 39\quad 68\quad 17\quad 57\\\\
-> 91\quad 71\quad 52\quad 38\quad 17\quad 14\quad 91\quad 43\quad 58\quad 50\quad 27\quad 29\quad 48\\\\
-> 63\quad 66\quad 04\quad 68\quad 89\quad 53\quad 67\quad 30\quad 73\quad 16\quad 69\quad 87\quad 40\quad 31\\\\
-> 04\quad 62\quad 98\quad 27\quad 23\quad 09\quad 70\quad 98\quad 73\quad 93\quad 38\quad 53\quad 60\quad 04\quad  23\\\\
-> \\end{gather}                                                                                             
+> 75\\\\\\\\
+> 95\ 64\\\\\\\\
+> 17\ 47\ 82\\\\\\\\
+> 18\ 35\ 87\ 10\\\\\\\\
+> 20\ 04\ 82\ 47\ 65\\\\\\\\
+> 19\ 01\ 23\ 75\ 03\ 34\\\\\\\\
+> 88\ 02\ 77\ 73\ 07\ 63\ 67\\\\\\\\
+> 99\ 65\ 04\ 28\ 06\ 16\ 70\ 92\\\\\\\\
+> 41\ 41\ 26\ 56\ 83\ 40\ 80\ 70\ 33\\\\\\\\
+> 41\ 48\ 72\ 33\ 47\ 32\ 37\ 16\ 94\ 29\\\\\\\\
+> 53\ 71\ 44\ 65\ 25\ 43\ 91\ 52\ 97\ 51\ 14\\\\\\\\
+> 70\ 11\ 33\ 28\ 77\ 73\ 17\ 78\ 39\ 68\ 17\ 57\\\\\\\\
+> 91\ 71\ 52\ 38\ 17\ 14\ 91\ 43\ 58\ 50\ 27\ 29\ 48\\\\\\\\
+> 63\ 66\ 04\ 68\ 89\ 53\ 67\ 30\ 73\ 16\ 69\ 87\ 40\ 31\\\\\\\\
+> 04\ 62\ 98\ 27\ 23\ 09\ 70\ 98\ 73\ 93\ 38\ 53\ 60\ 04\ 23
 > \\]
->
-> NOTE: As there are only 16384 routes, it is possible to solve this problem
-> by trying every route. However, Problem 67, is the same challenge with a
-> triangle containing one-hundred rows; it cannot be solved by brute force,
-> and requires a clever method! ;o)
+> 
+> **NOTE:** As there are only \\( 16384 \\) routes, it is possible to solve this problem by trying every route. However, [Problem 67](https://projecteuler.net/problem=67), is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)

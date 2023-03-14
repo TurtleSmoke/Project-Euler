@@ -2,7 +2,7 @@
 
 - [Introduction](introduction/introduction.md)
 - [Project Euler](problems/project_euler.md)
-    - [Problem 1: Multiples of 3 and 5](problems/problem_0001/problem.md)
+    - [Problem 1: Multiples of 3 or 5](problems/problem_0001/problem.md)
         - [Brute force](problems/problem_0001/solution1.md)
         - [Three by three](problems/problem_0001/solution2.md)
         - [Summing everything](problems/problem_0001/solution3.md)

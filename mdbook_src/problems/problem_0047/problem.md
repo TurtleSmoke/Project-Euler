@@ -3,19 +3,17 @@
 > The first two consecutive numbers to have two distinct prime factors are:
 > 
 > \\[
-> \begin{align}
-> 14 &= 2 \times 7\\\\
-> 15 &= 3 \times 5\\\\
-> \end{align}
+> 14 = 2 × 7\\\\\\\\
+> 15 = 3 × 5
 > \\]
 > 
 > The first three consecutive numbers to have three distinct prime factors are:
 > 
 > \\[
 > \begin{align}
-> 644 &= 2^2 \times 7 \times 23\\\\
-> 645 &= 3 \times 5 \times 43\\\\
-> 646 &= 2 \times 17 \times 19\\\\
+> 644 &= 2^2 × 7 × 23\\\\
+> 645 &= 3 × 5 × 43\\\\
+> 646 &= 2 × 17 × 19.
 > \end{align}
 > \\]
 > 

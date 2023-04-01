@@ -217,5 +217,8 @@
         - [Brute force](problems/problem_0053/solution1.md)
         - [Pascal's Triangle](problems/problem_0053/solution2.md)
         - [Solution](problems/problem_0053/solution.md)
+    - [Problem 54: Poker hands](problems/problem_0054/problem.md)
+        - [Brute force](problems/problem_0054/solution1.md)
+        - [Solution](problems/problem_0054/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

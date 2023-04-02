@@ -223,5 +223,8 @@
     - [Problem 55: Lychrel numbers](problems/problem_0055/problem.md)
         - [Brute force](problems/problem_0055/solution1.md)
         - [Solution](problems/problem_0055/solution.md)
+    - [Problem 56: Powerful digit sum](problems/problem_0056/problem.md)
+        - [Brute force](problems/problem_0056/solution1.md)
+        - [Solution](problems/problem_0056/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

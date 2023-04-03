@@ -230,5 +230,8 @@
         - [Brute force](problems/problem_0057/solution1.md)
         - [A better recurrence?](problems/problem_0057/solution2.md)
         - [Solution](problems/problem_0057/solution.md)
+    - [Problem 58: Spiral primes](problems/problem_0058/problem.md)
+        - [Brute force](problems/problem_0058/solution1.md)
+        - [Solution](problems/problem_0058/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

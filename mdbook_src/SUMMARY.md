@@ -233,5 +233,8 @@
     - [Problem 58: Spiral primes](problems/problem_0058/problem.md)
         - [Brute force](problems/problem_0058/solution1.md)
         - [Solution](problems/problem_0058/solution.md)
+    - [Problem 59: XOR decryption](problems/problem_0059/problem.md)
+        - [Brute force](problems/problem_0059/solution1.md)
+        - [Solution](problems/problem_0059/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

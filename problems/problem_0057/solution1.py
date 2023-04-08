@@ -1,6 +1,7 @@
 def new_fraction(numerator, denominator):
     return denominator, 2 * denominator + numerator
 
+
 def square_root_convergents():
     numerator = 0
     denominator = 1

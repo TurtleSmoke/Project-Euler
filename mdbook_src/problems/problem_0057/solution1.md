@@ -24,7 +24,7 @@ def square_root_convergents():
     numerator = 0
     denominator = 1
     count = 0
-    for i in range(1000):
+    for _ in range(1000):
         numerator, denominator = new_fraction(numerator, denominator)
         if len(str(numerator + denominator)) > len(str(denominator)):
             count += 1

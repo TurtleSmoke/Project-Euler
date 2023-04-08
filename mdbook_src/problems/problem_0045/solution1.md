@@ -34,7 +34,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 def triangular_pentagonal_and_hexagonal():
     t, p, h = 286, 166, 144
     ti, pi, hi = tn(t), pn(p), hn(h)
-    while not (ti == pi == hi):
+    while not ti == pi == hi:
         if ti < pi:
             t += 1
             ti = tn(t)

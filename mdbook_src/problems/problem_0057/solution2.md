@@ -33,7 +33,7 @@ def square_root_convergents():
     pn = 1
     qn = 1
     count = 0
-    for i in range(1000):
+    for _ in range(1000):
         pn, qn = 2 * qn + pn, qn + pn
         if len(str(pn)) > len(str(qn)):
             count += 1

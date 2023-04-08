@@ -10,7 +10,7 @@ From [solution1.py](https://github.com/TurtleSmoke/Project-Euler/blob/main/probl
 
 ```python
 def is_lychrel(n):
-    for i in range(50):
+    for _ in range(50):
         n += int(str(n)[::-1])
         if str(n) == str(n)[::-1]:
             return False

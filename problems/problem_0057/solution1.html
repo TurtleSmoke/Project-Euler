@@ -165,7 +165,7 @@ If the new numerator has more digits than the denominator, increment the counter
     numerator = 0
     denominator = 1
     count = 0
-    for i in range(1000):
+    for _ in range(1000):
         numerator, denominator = new_fraction(numerator, denominator)
         if len(str(numerator + denominator)) &gt; len(str(denominator)):
             count += 1

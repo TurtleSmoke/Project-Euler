@@ -156,7 +156,7 @@ In this problem, a number is considered a Lychrel number if fails to form a pali
 <p>The first step is to write a function that checks if a number is a Lychrel number.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0055/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def is_lychrel(n):
-    for i in range(50):
+    for _ in range(50):
         n += int(str(n)[::-1])
         if str(n) == str(n)[::-1]:
             return False

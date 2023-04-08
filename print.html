@@ -3532,7 +3532,7 @@ This is because \( T_n \), \( P_n \) and \( H_n \) are all increasing functions 
 <pre><code class="language-python">def triangular_pentagonal_and_hexagonal():
     t, p, h = 286, 166, 144
     ti, pi, hi = tn(t), pn(p), hn(h)
-    while not (ti == pi == hi):
+    while not ti == pi == hi:
         if ti &lt; pi:
             t += 1
             ti = tn(t)
@@ -4246,7 +4246,7 @@ In this problem, a number is considered a Lychrel number if fails to form a pali
 <p>The first step is to write a function that checks if a number is a Lychrel number.</p>
 <p>From <a href="https://github.com/TurtleSmoke/Project-Euler/blob/main/problems/problem_0055/solution1.py">solution1.py</a>:</p>
 <pre><code class="language-python">def is_lychrel(n):
-    for i in range(50):
+    for _ in range(50):
         n += int(str(n)[::-1])
         if str(n) == str(n)[::-1]:
             return False
@@ -4315,7 +4315,7 @@ If the new numerator has more digits than the denominator, increment the counter
     numerator = 0
     denominator = 1
     count = 0
-    for i in range(1000):
+    for _ in range(1000):
         numerator, denominator = new_fraction(numerator, denominator)
         if len(str(numerator + denominator)) &gt; len(str(denominator)):
             count += 1
@@ -4346,7 +4346,7 @@ x_{n+1} = \frac{p_{n+1}}{q_{n+1}} = \frac{2 + \frac{p_n}{q_n}}{1 + \frac{p_n}{q_
     pn = 1
     qn = 1
     count = 0
-    for i in range(1000):
+    for _ in range(1000):
         pn, qn = 2 * qn + pn, qn + pn
         if len(str(pn)) &gt; len(str(qn)):
             count += 1

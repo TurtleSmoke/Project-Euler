@@ -171,7 +171,7 @@ This is because \( T_n \), \( P_n \) and \( H_n \) are all increasing functions 
 <pre><code class="language-python">def triangular_pentagonal_and_hexagonal():
     t, p, h = 286, 166, 144
     ti, pi, hi = tn(t), pn(p), hn(h)
-    while not (ti == pi == hi):
+    while not ti == pi == hi:
         if ti &lt; pi:
             t += 1
             ti = tn(t)

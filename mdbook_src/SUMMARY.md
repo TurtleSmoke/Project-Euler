@@ -256,5 +256,8 @@
         - [Brute force](problems/problem_0064/solution1.md)
         - [Another property of continued fractions](problems/problem_0064/solution2.md)
         - [Solution](problems/problem_0064/solution.md)
+    - [Problem 65: Convergents of e](problems/problem_0065/problem.md)
+        - [Brute force](problems/problem_0065/solution1.md)
+        - [Solution](problems/problem_0065/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

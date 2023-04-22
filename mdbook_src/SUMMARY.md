@@ -266,5 +266,8 @@
     - [Problem 67: Maximum path sum II](problems/problem_0067/problem.md)
         - [Brute force](problems/problem_0067/solution1.md)
         - [Solution](problems/problem_0067/solution.md)
+    - [Problem 68: Magic 5-gon ring](problems/problem_0068/problem.md)
+        - [Brute force](problems/problem_0068/solution1.md)
+        - [Solution](problems/problem_0068/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

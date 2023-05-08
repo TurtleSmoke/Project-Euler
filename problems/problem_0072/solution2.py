@@ -6,7 +6,6 @@ def counting_fractions(n=1000000):
         for j in range(2 * i, n + 1, i):
             tlist[j] -= p
 
-    print(tlist[:20])
     return sum(tlist) - 1
 
 

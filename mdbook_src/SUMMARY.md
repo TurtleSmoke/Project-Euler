@@ -286,5 +286,8 @@
         - [Brute force](problems/problem_0072/solution1.md)
         - [Farey sequence and Euler's totient function](problems/problem_0072/solution2.md)
         - [Solution](problems/problem_0072/solution.md)
+    - [Problem 73: Counting fractions in a range](problems/problem_0073/problem.md)
+        - [Brute force](problems/problem_0073/solution1.md)
+        - [Solution](problems/problem_0073/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

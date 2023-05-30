@@ -293,5 +293,8 @@
         - [Brute force](problems/problem_0074/solution1.md)
         - [Caching the chain](problems/problem_0074/solution2.md)
         - [Solution](problems/problem_0074/solution.md)
+    - [Problem 75: Singular Integer Right Triangles](problems/problem_0075/problem.md)
+        - [Tree of primitive Pythagorean triples](problems/problem_0075/solution1.md)
+        - [Solution](problems/problem_0075/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

@@ -296,5 +296,8 @@
     - [Problem 75: Singular Integer Right Triangles](problems/problem_0075/problem.md)
         - [Tree of primitive Pythagorean triples](problems/problem_0075/solution1.md)
         - [Solution](problems/problem_0075/solution.md)
+    - [Problem 76: Counting Summations](problems/problem_0076/problem.md)
+        - [Brute force](problems/problem_0076/solution1.md)
+        - [Solution](problems/problem_0076/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

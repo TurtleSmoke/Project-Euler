@@ -306,5 +306,8 @@
         - [Dynamic programming](problems/problem_0078/solution1.md)
         - [Euler partition function](problems/problem_0078/solution2.md)
         - [Solution](problems/problem_0077/solution.md)
+    - [Problem 79: Passcode Derivation](problems/problem_0079/problem.md)
+        - [Topological sorting](problems/problem_0079/solution1.md)
+        - [Solution](problems/problem_0079/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

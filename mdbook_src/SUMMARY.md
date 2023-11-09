@@ -312,5 +312,8 @@
     - [Problem 80: Square Root Digital Expansion](problems/problem_0080/problem.md)
         - [Square roots by subtraction](problems/problem_0080/solution1.md)
         - [Solution](problems/problem_0080/solution.md)
+    - [Problem 81: Path Sum: Two Ways](problems/problem_0081/problem.md)
+        - [Dynamic programming](problems/problem_0081/solution1.md)
+        - [Solution](problems/problem_0081/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

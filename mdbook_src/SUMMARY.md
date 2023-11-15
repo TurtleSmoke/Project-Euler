@@ -315,5 +315,8 @@
     - [Problem 81: Path Sum: Two Ways](problems/problem_0081/problem.md)
         - [Dynamic programming](problems/problem_0081/solution1.md)
         - [Solution](problems/problem_0081/solution.md)
+    - [Problem 82: Path Sum: Three Ways](problems/problem_0082/problem.md)
+        - [Dynamic programming](problems/problem_0082/solution1.md)
+        - [Solution](problems/problem_0082/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

@@ -322,5 +322,8 @@
         - [Breadth-first search](problems/problem_0083/solution1.md)
         - [Dijkstra's algorithm](problems/problem_0083/solution2.md)
         - [Solution](problems/problem_0083/solution.md)
+    - [Problem 84: Monopoly Odds](problems/problem_0084/problem.md)
+        - [Brute force](problems/problem_0084/solution1.md)
+        - [Solution](problems/problem_0084/solution.md)
 - [Usage](usage/usage.md)
 - [Contributing](contributing/contributing.md)

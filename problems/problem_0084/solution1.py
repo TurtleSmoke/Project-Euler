@@ -100,11 +100,6 @@ def get_markov():
         for (current_state, next_state, proba) in transition:
             dice_transition[to(*current_state), to(*next_state)] += proba
 
-    for i in (range(120)):
-        if not np.isclose(np.sum(dice_transition[i, :]), 1):
-            print(i, np.sum(dice_transition[i, :]), dice_transition[i, :])
-            assert False
-
     # Probability of staying at the same position is 1 if the player is not on a card position
     card_transition = np.identity(120, dtype=np.float64)
     card_positions = np.array(COMMUNITY_CHEST_CARD_POSITIONS + CHANCE_CARD_POSITIONS)
@@ -114,36 +109,20 @@ def get_markov():
         for (current_state, next_state, proba) in transition:
             card_transition[to(*current_state), to(*next_state)] += proba
 
-    for i in range(120):
-        if not np.isclose(np.sum(dice_transition[i, :]), 1):
-            print(i, np.sum(dice_transition[i, :]), dice_transition[i, :])
-            assert False
-
-    res = dice_transition @ card_transition
-    np.savetxt("matrix.csv", res, delimiter=",", fmt="%f")
-
-    for i in range(120):
-        if not np.isclose(np.sum(res[i, :]), 1):
-            print(i, np.sum(res[i, :]), res[i, :])
-            assert False
-
-    return res
+    return dice_transition @ card_transition
 
 
 def monopoly_odds():
     markov = get_markov()
 
-    markov2 = np.linalg.matrix_power(markov, 100)
-    proba = markov2[0, :]
-    probability = proba[0:40] + proba[40:80] + proba[80:120]
-    probability[10] += probability[30]
-    probability[30] = 0
-    print(sum(probability))
-    print(np.sort(probability))
-    print(np.argsort(probability))
+    initial_state = np.zeros(120)
+    initial_state[0] = 1
+    steady_state = initial_state @ np.linalg.matrix_power(markov, 100)
+    steady_state = np.sum(steady_state.reshape((3, 40)), axis=0)
+    steady_state[10] += steady_state[30]
+    steady_state[30] = 0
+    return "".join(np.argsort(steady_state)[-3:].astype(str))
 
 
 if __name__ == "__main__":
-    matrix = monopoly_odds()
-
-    # np.savetxt("matrix.csv", matrix, delimiter=",", fmt="%f")
+    print(monopoly_odds())
